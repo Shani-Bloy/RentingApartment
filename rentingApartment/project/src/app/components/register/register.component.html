@@ -1,0 +1,62 @@
+<div>
+  <form class="example-form">
+    <h1>register</h1>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput #firstName>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput #lastName>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" #email>
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" #password>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone</mat-label>
+        <span matPrefix>+1 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234" #phone>
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+    </form>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Additional Phone</mat-label>
+        <span matPrefix>+1 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234" #additionalPhone>
+        <mat-icon matSuffix>add_ic_call</mat-icon>
+      </mat-form-field>
+    </form>
+    <button mat-flat-button color="primary" class="example-full-width" (click)="addRentor(firstName.value,lastName.value,
+    password.value,email.value,phone.value,additionalPhone.value)">register</button>
+  </form>
+</div>

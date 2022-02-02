@@ -1,0 +1,80 @@
+
+
+  <mat-card  *ngIf='Apartment'>
+    <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
+    <mat-card-header>
+      <mat-card-title>IdApartment: {{ApartmentD.IdApartment}}</mat-card-title>
+    </mat-card-header>
+    <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
+    <!-- <img mat-card-image src="{{ApartmentD.ImageSrc}}" alt="Photo of a Shiba Inu" style="width: 35%; margin-left: 60%;"> -->
+    <mat-card-content>
+      <table style="width: 50%;">
+        <tr >
+        <td >City <p style="font-weight:bold"> {{Apartment.City}}</p></td> 
+        <td >Street <p style="font-weight:bold"> {{Apartment.Street}}</p></td> 
+        <td >Floor <p style="font-weight:bold"> {{Apartment.Floor}}</p></td> 
+        </tr>
+        <tr height="30px;" width="50%">
+       <td colspan="6">  <hr></td>
+          </tr>
+          <tr>
+            <td colspan="6"><h1>About the Apartment</h1></td>
+          </tr>
+        <tr style="width: 50%;"> 
+         
+          <td style="width: 5%;" [ngClass]="ApartmentD.Pool !='false' ? 'red' : 'green'"><mat-icon>local_parking</mat-icon> </td>        
+          <td style="width: 5%;"><mat-icon>pool</mat-icon>  </td>
+          <td style="width: 5%;"><mat-icon>accessible</mat-icon>  </td>
+          <td style="width: 5%;"><mat-icon>balcony</mat-icon>  </td>
+           <td style="width: 5%;"><mat-icon>elevator</mat-icon>  </td>
+          <td style="width: 5%;"><mat-icon>crib</mat-icon> </td>     
+
+        </tr>
+        <tr style="width: 50%;">
+            
+          <td style="width: 5%;"> Parking</td>        
+          <td style="width: 5%;">  pool</td>
+          <td style="width: 5%;"> accessible</td>
+          <td style="width: 5%;">  balcony</td>
+           <td style="width: 5%;"> elevator</td>
+          <td style="width: 5%;"> crib</td>     
+
+        </tr>
+        <tr style="width: 50%;">        
+          <td colspan="6" style="width: 50%;">
+            <br>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <!-- <p> RentorId:{{Apartment.RentorId}}</p>
+      <p> Parking:{{ApartmentD.Parking}}</p>
+      <p>Pool:{{ApartmentD.Pool}}</p>
+      <p> Porch:{{ApartmentD.Porch}}</p>
+      <p> AdditionalDescription:{{ApartmentD.AdditionalDescription}}</p>
+      <p> Crib :{{ApartmentD.Crib}}</p>
+      <p>ApartmentDetailsID :{{ApartmentD.ApartmentDetailsID}}</p>
+      <p>DisableAccess :{{ApartmentD.DisableAccess}}</p> -->
+    </mat-card-content>
+    
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openDialog()">Send Email</button>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+ 
+<!-- 
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>IdApartment: {{ApartmentD.IdApartment}}</mat-card-title>
+
+    </mat-card-header>
+  
+  
+  </mat-card> -->
+
+

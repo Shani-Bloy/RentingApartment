@@ -1,0 +1,81 @@
+<p>
+  <mat-toolbar style="height: 130px" color="primary">
+    <table style="width: 97%;">
+      <tr>
+        <td colspan="6">
+          <h1
+            align="left"
+            style="text-align: right; font-size: 30px; cursor: pointer;"
+            routerLink="/home"
+          >
+            APARTMENT.COM <mat-icon>apartment</mat-icon>
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 3%;"></td>
+        <td>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </td>
+
+        <td>
+          <button
+            mat-flat-button
+            color="primary"
+            style="border: 2px solid"
+            routerLink="/login"
+          >
+            <mat-icon>login</mat-icon> login
+          </button>
+        </td>
+        <td>
+          <button
+            mat-flat-button
+            color="primary"
+            style="border: 2px solid"
+            routerLink="/register"
+          >
+            <mat-icon>person_add</mat-icon> register
+          </button>
+        </td>
+        <!-- <button mat-flat-button color="primary" routerLink='/apartments'><mat-icon>apartment</mat-icon> apartments</button> -->
+        <td>
+          <button
+            mat-flat-button
+            color="primary"
+            style="border: 2px solid"
+            routerLink="/Search"
+          >
+            <mat-icon>search</mat-icon> search for apartment
+          </button>
+        </td>
+        <td style="text-align: right; width: 65%">
+          <!-- <span>My App</span> -->
+          <span class="example-spacer"></span>
+
+          <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+          >
+            <td></td>
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+          >
+            <mat-icon>share</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </mat-toolbar>
+</p>

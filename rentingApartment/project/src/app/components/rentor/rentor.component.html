@@ -1,0 +1,55 @@
+<div class="login" *ngIf="newRentor">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h1>Hi {{ newRentor.FirstName }} {{ newRentor.LastName }}</h1>
+      <h2>welcome to our site</h2>
+      <h1 style="text-align: center; font-size: 72px; padding-top: 20px">😍</h1>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-flat-button
+        routerLink="/addApartment"
+        style="background-color: rgb(244, 189, 50); width: 144px; height: 55px"
+        class="addApartment"
+        (click)="add()"
+      >
+        add new apartment
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="login" *ngIf="rentorData">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h1>Hi {{ rentorData.FirstName }} {{ rentorData.LastName }}</h1>
+      <div>ID rentor: {{ rentorData.IdRentor }}</div>
+      <div>Mail: {{ rentorData.Mail }}</div>
+      <div>Phone: {{ rentorData.Phone }}</div>
+      <P>Rentor id :{{ rentorData.IdRentor }}</P>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-flat-button
+        routerLink="/addApartment"
+        style="background-color: rgb(244, 189, 50); width: 144px; height: 55px"
+        class="addApartment"
+        (click)="add()"
+      >
+        add new apartment
+      </button>
+      <button
+        mat-flat-button
+        routerLink="/apartments"
+        style="background-color: rgb(244, 189, 50); width: 144px; height: 55px"
+        class="addApartment"
+      >
+        update your details
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- <div *ngIf='!showAdd'>
+    <app-add-apartment [rentor]='rentorData' [showAdd]='false'></app-add-apartment>
+</div> -->

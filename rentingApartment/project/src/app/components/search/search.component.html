@@ -1,0 +1,225 @@
+<h1 style="text-align: center">Find the ideal apartment for you</h1>
+<!-- <div *ngIf='!Apartments'>
+  <img src='https://localhost:44312/images/1.jpg'>
+</div> -->
+
+<div class="main">
+  <mat-form-field appearance="fill" class="search">
+    <mat-label>check-in check-out</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate #StartDate placeholder="Start date" />
+      <input matEndDate #EndDate placeholder="End date" />
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+  <!-- <form class="example-form"> -->
+  <mat-form-field class="example-full-width" appearance="fill" class="search">
+    <mat-label>City</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+      #city
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <!-- </form> -->
+
+  <mat-form-field appearance="fill" class="search">
+    <mat-label>num children</mat-label>
+    <input matInput type="number" min="0" max="20" #numChildren />
+  </mat-form-field>
+
+  <button
+    mat-flat-button
+    style="background-color: gray; width: 100px; height: 55px"
+    class="search"
+    (click)="advancedSearch()"
+  > more
+    <mat-icon *ngIf="!IsAdvancedSearch">expand_more</mat-icon>
+    <mat-icon *ngIf="IsAdvancedSearch">expand_less</mat-icon>
+  </button>
+
+  <button
+    mat-flat-button
+    style="background-color: rgb(244, 189, 50); width: 144px; height: 55px"
+    class="search"
+    (click)="
+      search(city.value, numChildren.value, StartDate.value, EndDate.value)
+    "
+  >
+    <mat-icon>search</mat-icon> search
+  </button>
+</div>
+
+<div id="divAdvancedSearch" *ngIf="IsAdvancedSearch">
+  <mat-card style="width: 57%; margin: -2.5%; margin-left: 18%">
+    <!-- <mat-card-title>Actions Buttons</mat-card-title>
+          <mat-card-subtitle>Start</mat-card-subtitle> -->
+    <mat-card-actions>
+      <section class="example-section" [formGroup]="toppings">
+        <h4>Apartment characteristics:</h4>
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 25%">
+              <p>
+                <mat-checkbox formControlName="Parking">Parking</mat-checkbox>
+              </p>
+            </td>
+            <td style="width: 25%">
+              <p>
+                <mat-checkbox formControlName="Elevator">Elevator</mat-checkbox>
+              </p>
+            </td>
+            <td style="width: 25%">
+              <p><mat-checkbox formControlName="Porch">Porch</mat-checkbox></p>
+            </td>
+            <td style="width: 25%">
+              <p>
+                <mat-checkbox formControlName="DisableAccess"
+                  >DisableAccess</mat-checkbox
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 25%">
+              <p><mat-checkbox formControlName="Pool">Pool</mat-checkbox></p>
+            </td>
+            <td style="width: 25%">
+              <p>
+                <mat-checkbox formControlName="ImmediatelyRenting"
+                  >ImmediatelyRenting</mat-checkbox
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field appearance="fill" class="search">
+                <mat-label>num of rooms</mat-label>
+                <input matInput type="number" min="0" max="20" #numChildren />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="fill" class="search">
+                <mat-label>num of Airconditioners</mat-label>
+                <input matInput type="number" min="0" max="20" #numChildren />
+              </mat-form-field>
+              
+            </td>
+
+            <td colspan="2">
+             Price
+              <mat-form-field appearance="fill" style="width: 100px;" class="search">
+                <mat-label>min price</mat-label>
+                <input matInput type="number" min="0" max="20" #numChildren />
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 100px;" class="search">
+                <mat-label>max price</mat-label>
+                <input matInput type="number" min="0" max="20" #numChildren />
+              </mat-form-field> 
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="example-section" [formGroup]="toppings">
+        <h4>You chose:</h4>
+        {{ toppings.value | json }}
+      </section>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div *ngIf="Apartments">
+  <h1 style="text-align: center">
+    {{ Apartments.length }} apartments were found
+  </h1>
+
+  <div *ngFor="let apartment of Apartments">
+    <div class="apartments" style="width: 80%; margin: auto">
+      <mat-card class="mat-card">
+        <mat-card-title-group class="mat-card-title-group">
+          <mat-card-title>{{ apartment.ApartmentId }}</mat-card-title>
+          <mat-card-subtitle>{{ apartment.Price }} $ per bed</mat-card-subtitle>
+          <!-- <div class="imgDiv">  -->
+          <img
+            class="apartment_image"
+            routerLink="/apartmentDetails/{{ apartment.ApartmentId }}"
+            mat-card-lg-image
+            src="{{ apartment.Img }}"
+          />
+          <!-- </div> -->
+
+          <button
+            class="btnOnImage"
+            mat-flat-button
+            routerLink="/apartmentDetails/{{ apartment.ApartmentId }}"
+          >
+            show more detailes
+          </button>
+          <div
+            *ngIf="apartment.DiscountPercentages != NULL"
+            class="divDiscount"
+          >
+            discount
+          </div>
+          <div class="hide">
+            {{ apartment.DiscountPercentages }} % from
+            {{ apartment.NumberOfDiscountDays }} nights
+          </div>
+        </mat-card-title-group>
+
+        <mat-card-actions>
+          <div class="innerDiv">
+            <mat-icon>home</mat-icon> <br />
+            {{ apartment.NumberOfRooms }} bedrooms
+          </div>
+          <div class="innerDiv">
+            <mat-icon>bedroom_child</mat-icon> <br />
+            {{ apartment.NumberOfBeds }} avilable bedrooms
+          </div>
+          <div class="innerDiv">
+            <mat-icon>airline_seat_individual_suite</mat-icon> <br />
+            {{ apartment.NumberOfBeds }} avilable bedrooms for children
+          </div>
+          <!-- <div *ngIf='{{Apartment.DisableAccess}}'>
+              <mat-icon>accessible</mat-icon>
+            </div>
+            <div *ngIf='!{{Apartment.DisableAccess}}'>
+              <mat-icon>not_accessible</mat-icon>
+            </div> -->
+          <div *ngIf="apartment.Elevator == True" class="innerDiv">
+            <mat-icon>elevator</mat-icon>
+          </div> </mat-card-actions
+        ><br />
+        <p style="height: 20px"></p>
+        <hr />
+
+        <mat-card-content style="font-weight: bold; font-size: 15px">
+          {{ apartment.City }} , {{ apartment.Street }} in floor
+          {{ apartment.Floor }}
+          <!-- <mat-icon>bedroom_parent</mat-icon>         
+            <mat-icon>bathtub</mat-icon>
+            <mat-icon>night_shelter</mat-icon>
+            <mat-icon>crib</mat-icon>
+            <mat-icon>shower</mat-icon> -->
+        </mat-card-content>
+        <button (click)="sendEmail(apartment.RentorId)">send email</button>
+      </mat-card>
+    </div>
+  </div>
+</div>

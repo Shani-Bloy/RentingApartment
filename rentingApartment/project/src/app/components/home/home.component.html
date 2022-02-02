@@ -1,0 +1,66 @@
+
+
+<h1 style="text-align: center;">Apartments</h1>
+<div *ngIf='apartments'>
+  <div *ngFor='let apartment of apartments'>
+    <div class="apartments" style="width:80%; margin:auto;">
+      <mat-card class="mat-card" style="height: 500px;">
+        <mat-card-title-group class="mat-card-title-group">
+          <mat-card-title>{{apartment.ApartmentId}}</mat-card-title>
+          <mat-card-subtitle>{{apartment.Price }} $ per bed</mat-card-subtitle>
+          <!-- <div class="imgDiv">  -->
+            <img class="apartment_image" routerLink='/apartmentDetails/{{apartment.ApartmentId}}' mat-card-lg-image
+            src="{{apartment.Img}}">
+          <!-- </div> -->
+         
+          <button class="btnOnImage" mat-flat-button routerLink='/apartmentDetails/{{apartment.ApartmentId}}'>
+            show more detailes
+          </button>
+         <div *ngIf='apartment.DiscountPercentages!=NULL' class="divDiscount">
+            discount
+          </div>
+          <div class="hide">
+            {{apartment.DiscountPercentages}} % from {{apartment.NumberOfDiscountDays }} nights
+          </div>
+          
+        </mat-card-title-group>
+
+        <mat-card-actions>
+          <div class="innerDiv">
+            <mat-icon>home</mat-icon> <br>
+            {{apartment.NumberOfRooms }} bedrooms
+          </div>
+          <div class="innerDiv">
+            <mat-icon>bedroom_child</mat-icon> <br>
+            {{apartment.NumberOfBeds }} avilable bedrooms
+          </div>
+          <div class="innerDiv">
+            <mat-icon>airline_seat_individual_suite</mat-icon> <br>
+            {{apartment.NumberOfBeds }} avilable bedrooms for children
+          </div>
+          <!-- <div *ngIf='{{Apartment.DisableAccess}}'>
+            <mat-icon>accessible</mat-icon>
+          </div>
+          <div *ngIf='!{{Apartment.DisableAccess}}'>
+            <mat-icon>not_accessible</mat-icon>
+          </div> -->
+          <div *ngIf='apartment.Elevator==True' class="innerDiv">
+            <mat-icon>elevator</mat-icon>
+          </div>
+        </mat-card-actions><br>
+        <p style="height: 20px;"></p>
+          <hr>
+          
+        <mat-card-content style="font-weight: bold; font-size: 15px; ">
+          {{apartment.City}} , {{apartment.Street }} in floor {{apartment.Floor}}
+          <!-- <mat-icon>bedroom_parent</mat-icon>         
+          <mat-icon>bathtub</mat-icon>
+          <mat-icon>night_shelter</mat-icon>
+          <mat-icon>crib</mat-icon>
+          <mat-icon>shower</mat-icon> -->
+        </mat-card-content>
+        <button (click)="sendEmail(apartment.RentorId)">send email</button>       
+      </mat-card>
+    </div>
+  
+  </div>

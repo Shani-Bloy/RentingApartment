@@ -1,0 +1,14 @@
+
+<div *ngIf='apartments'> 
+   <div *ngIf='apartments.length==0'>
+        <h1 style="text-align: center;">
+         Your apartment pool is still empty :(      
+      </h1>
+      <button mat-flat-button  style="margin-left:45%;background-color:rgb(244, 189, 50);" (click)='goBack()'>to add new apartment</button>
+      </div>
+   <div *ngFor='let apartment of apartments' >
+
+     
+      <app-apartment [apartment]="apartment"></app-apartment> 
+    </div>
+</div>

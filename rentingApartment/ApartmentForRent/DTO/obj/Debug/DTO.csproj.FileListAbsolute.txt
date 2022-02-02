@@ -1,0 +1,30 @@
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\bin\Debug\DTO.dll
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\bin\Debug\DTO.pdb
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\obj\Debug\DTO.dll
+D:\##לימודי תכנות\תשפא-ו' סמינר\final project\ApartmentForRent\DTO\obj\Debug\DTO.pdb
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.dll
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.pdb
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.dll
+D:\update project\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.pdb
+D:\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.dll
+D:\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.pdb
+D:\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.dll
+D:\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\bin\Debug\DTO.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\DTO\obj\Debug\DTO.pdb
+D:\FinalProject\ApartmentForRent\DTO\bin\Debug\DTO.dll
+D:\FinalProject\ApartmentForRent\DTO\bin\Debug\DTO.pdb
+D:\FinalProject\ApartmentForRent\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\FinalProject\ApartmentForRent\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\FinalProject\ApartmentForRent\DTO\obj\Debug\DTO.dll
+D:\FinalProject\ApartmentForRent\DTO\obj\Debug\DTO.pdb

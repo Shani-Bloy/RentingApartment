@@ -1,0 +1,22 @@
+
+<div *ngIf='apartment'> 
+    <mat-card class="example-card">       
+        <p>city : <input [(ngModel)]="apartment.City"></p> 
+        <p>DiscountPercentages : <input [(ngModel)]="apartment.DiscountPercentages"></p> 
+        <p>Elevator : <input [(ngModel)]="apartment.Elevator"></p> 
+        <p>Floor : <input [(ngModel)]="apartment.Floor"></p>
+        <p>ImmediatePrice : <input [(ngModel)]="apartment.ImmediatePrice"></p> 
+        <p>IsRentingImmediately : <input [(ngModel)]="apartment.IsRentingImmediately"></p> 
+        <p>NumberOfAirConditioners : <input [(ngModel)]="apartment.NumberOfAirConditioners"></p> 
+        <p>NumberOfBeds : <input [(ngModel)]="apartment.NumberOfBeds"></p> 
+        <p>NumberOfDiscountDays : <input [(ngModel)]="apartment.NumberOfDiscountDays"></p> 
+        <p>NumberOfRooms : <input [(ngModel)]="apartment.NumberOfRooms"></p> 
+        <p>Price : <input [(ngModel)]="apartment.Price"></p>       
+        <p>Street : <input [(ngModel)]="apartment.Street"> </p>   
+        <mat-card-actions>    
+            <button mat-flat-button color="primary" (click)='save()'>SAVE</button>                    
+    <button mat-flat-button color="primary" routerLink='/apartmentDetails/{{apartment.ApartmentId}}'>for more details</button>
+    </mat-card-actions>
+    </mat-card>     
+   
+</div>

@@ -1,0 +1,53 @@
+<div>
+  <form class="example-form" [formGroup]="form">
+    <h1>Login</h1>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="email"
+        placeholder="Ex. pat@example.com"
+      />
+      <mat-error *ngIf="email.hasError('email') && email.touched">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required') && email.touched">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Enter your password</mat-label>
+      <input
+        [formControl]="password"
+        matInput
+        [type]="hide ? 'password' : 'text'"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="toggleHide()"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      class="example-full-width"
+      [disabled]="form.invalid"
+      (click)="login()"
+    >
+      login
+    </button>
+  </form>
+</div>
+
+<!-- <div *ngIf="rentorLogin" routerLink="/rentor">
+  please press to connect......
+</div> -->
+<!-- <app-rentor [rentorData]='rentorLogin'></app-rentor> -->
+<!-- <app-add-apartment [rentor]='rentorLogin'></app-add-apartment> -->

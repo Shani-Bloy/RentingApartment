@@ -1,0 +1,393 @@
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\API.dll.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\API.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\API.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.exe
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.exe.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.rsp
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.exe
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.exe.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.rsp
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.AppContext.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Collections.Immutable.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Console.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Globalization.Calendars.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Net.Http.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Net.Sockets.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Reflection.Metadata.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.ValueTuple.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.exe
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.exe.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.rsp
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Antlr3.Runtime.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\BL.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\DTO.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Web.Infrastructure.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Newtonsoft.Json.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Buffers.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.ComponentModel.Annotations.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Memory.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Numerics.Vectors.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Cors.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Helpers.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.Cors.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Mvc.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Optimization.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Razor.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\WebGrease.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\BL.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\BL.dll.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\DTO.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\EntityFramework.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\EntityFramework.SqlServer.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Buffers.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Memory.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Numerics.Vectors.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.Cors.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Newtonsoft.Json.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Helpers.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Mvc.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Optimization.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Razor.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Antlr3.Runtime.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.pdb
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.dll.config
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csprojAssemblyReference.cache
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csproj.CopyComplete
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.dll
+D:\‏‏תיקיה חדשה\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\API.dll.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\API.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\API.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.exe
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.exe.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csc.rsp
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.exe
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.exe.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\csi.rsp
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.AppContext.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Collections.Immutable.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Console.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Globalization.Calendars.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Net.Http.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Net.Sockets.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Reflection.Metadata.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.ValueTuple.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.exe
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.exe.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\vbc.rsp
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Antlr3.Runtime.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\BL.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\DTO.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Web.Infrastructure.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Newtonsoft.Json.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Buffers.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.ComponentModel.Annotations.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Memory.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Numerics.Vectors.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Cors.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Helpers.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.Cors.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Mvc.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Optimization.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Razor.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\WebGrease.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\BL.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\BL.dll.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\DTO.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\EntityFramework.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\EntityFramework.SqlServer.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Buffers.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Memory.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Numerics.Vectors.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.Cors.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Newtonsoft.Json.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Helpers.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Mvc.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Optimization.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.Razor.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Antlr3.Runtime.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.pdb
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\bin\Dal.dll.config
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csprojAssemblyReference.cache
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.csproj.CopyComplete
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.dll
+D:\פרויקט גמר\ApartmentForRent\ApartmentForRent\API\API\obj\Debug\API.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\API.dll.config
+D:\FinalProject\ApartmentForRent\API\API\bin\API.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\API.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csc.exe
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csc.exe.config
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csc.rsp
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csi.exe
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csi.exe.config
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\csi.rsp
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.AppContext.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Collections.Immutable.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Console.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Globalization.Calendars.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Net.Http.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Net.Sockets.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Reflection.Metadata.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.ValueTuple.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\vbc.exe
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\vbc.exe.config
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\vbc.rsp
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe
+D:\FinalProject\ApartmentForRent\API\API\bin\roslyn\VBCSCompiler.exe.config
+D:\FinalProject\ApartmentForRent\API\API\bin\Antlr3.Runtime.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\BL.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\DTO.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Web.Infrastructure.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Newtonsoft.Json.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Buffers.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.ComponentModel.Annotations.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Memory.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Numerics.Vectors.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Cors.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Helpers.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.Cors.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Mvc.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Optimization.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Razor.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\WebGrease.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Dal.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\BL.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\BL.dll.config
+D:\FinalProject\ApartmentForRent\API\API\bin\DTO.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Cors.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Options.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Extensions.Primitives.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.Net.Http.Headers.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Buffers.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Memory.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Numerics.Vectors.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Text.Encodings.Web.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.Cors.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Newtonsoft.Json.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Net.Http.Formatting.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Helpers.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Http.WebHost.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Mvc.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Optimization.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.Razor.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.Deployment.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\System.Web.WebPages.Razor.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Antlr3.Runtime.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\FinalProject\ApartmentForRent\API\API\bin\Dal.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\Dal.dll.config
+D:\FinalProject\ApartmentForRent\API\API\obj\Debug\API.csprojAssemblyReference.cache
+D:\FinalProject\ApartmentForRent\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+D:\FinalProject\ApartmentForRent\API\API\obj\Debug\API.csproj.CopyComplete
+D:\FinalProject\ApartmentForRent\API\API\obj\Debug\API.dll
+D:\FinalProject\ApartmentForRent\API\API\obj\Debug\API.pdb
+D:\FinalProject\ApartmentForRent\API\API\bin\Common.dll
+D:\FinalProject\ApartmentForRent\API\API\bin\Common.pdb

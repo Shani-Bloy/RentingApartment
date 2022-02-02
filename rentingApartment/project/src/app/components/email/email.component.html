@@ -1,0 +1,24 @@
+<form class="example-form">
+    <h1>Send email</h1>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput #senderName placeholder="Name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Phone" #senderPhone>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" #senderEmail>
+      </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="" #remarks></textarea>
+    </mat-form-field>
+    <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="Ok(data.rentorId,senderName.value,senderPhone.value,senderEmail.value,remarks.value)"  cdkFocusInitial [mat-dialog-close]="true">Ok</button>
+  </div>
+  </form>
+  
