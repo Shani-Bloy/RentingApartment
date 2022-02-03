@@ -18,7 +18,7 @@
     <Property Name="Price" Type="nvarchar" MaxLength="50" />
     <Property Name="DiscountPercentages" Type="nvarchar" MaxLength="50" />
     <Property Name="NumberOfDiscountDays" Type="nvarchar" MaxLength="50" />
-    <Property Name="Img" Type="nvarchar(max)" />
+    <Property Name="Img" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="ApartmentDetails">
     <Key>
@@ -40,8 +40,8 @@
     </Key>
     <Property Name="DatesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ApartmentId" Type="int" />
-    <Property Name="StartDate" Type="datetime" />
-    <Property Name="EndDate" Type="datetime" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
     <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Recommendations">
@@ -63,16 +63,6 @@
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="AddaitionalPhone" Type="nvarchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_Apartment_RentorDetails">
     <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
@@ -128,7 +118,6 @@
     <EntitySet Name="Dates" EntityType="Self.Dates" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Recommendations" EntityType="Self.Recommendations" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
       <End Role="RentorDetails" EntitySet="RentorDetails" />
       <End Role="Apartment" EntitySet="Apartment" />

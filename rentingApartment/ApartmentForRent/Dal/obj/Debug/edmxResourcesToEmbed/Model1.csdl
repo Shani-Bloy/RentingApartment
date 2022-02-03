@@ -18,10 +18,10 @@
     <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DiscountPercentages" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NumberOfDiscountDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="RentorDetails" Relationship="Self.FK_Apartment_RentorDetails" FromRole="Apartment" ToRole="RentorDetails" />
     <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_ApartmentDetails_Apartment" FromRole="Apartment" ToRole="ApartmentDetails" />
     <NavigationProperty Name="Dates" Relationship="Self.FK_Dates_Apartment" FromRole="Apartment" ToRole="Dates" />
-    <Property Name="Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="ApartmentDetails">
     <Key>
@@ -45,8 +45,8 @@
     </Key>
     <Property Name="DatesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ApartmentId" Type="Int32" />
-    <Property Name="StartDate" Type="DateTime" Precision="3" />
-    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="Apartment" Relationship="Self.FK_Dates_Apartment" FromRole="Dates" ToRole="Apartment" />
   </EntityType>
@@ -71,16 +71,6 @@
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="AddaitionalPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Apartment" Relationship="Self.FK_Apartment_RentorDetails" FromRole="RentorDetails" ToRole="Apartment" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Apartment_RentorDetails">
     <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
@@ -130,13 +120,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ApartmentsForRentEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ApartmentsForRentEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Apartment" EntityType="Self.Apartment" />
     <EntitySet Name="ApartmentDetails" EntityType="Self.ApartmentDetails" />
     <EntitySet Name="Dates" EntityType="Self.Dates" />
     <EntitySet Name="Recommendations" EntityType="Self.Recommendations" />
     <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
       <End Role="RentorDetails" EntitySet="RentorDetails" />
       <End Role="Apartment" EntitySet="Apartment" />

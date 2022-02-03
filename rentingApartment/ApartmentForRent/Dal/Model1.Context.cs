@@ -30,6 +30,5 @@ namespace Dal
         public virtual DbSet<Dates> Dates { get; set; }
         public virtual DbSet<Recommendations> Recommendations { get; set; }
         public virtual DbSet<RentorDetails> RentorDetails { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

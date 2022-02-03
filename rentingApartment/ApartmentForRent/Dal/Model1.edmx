@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ApartmentsForRentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ApartmentsForRentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Apartment">
           <Key>
             <PropertyRef Name="ApartmentId" />
@@ -23,7 +23,7 @@
           <Property Name="Price" Type="nvarchar" MaxLength="50" />
           <Property Name="DiscountPercentages" Type="nvarchar" MaxLength="50" />
           <Property Name="NumberOfDiscountDays" Type="nvarchar" MaxLength="50" />
-          <Property Name="Img" Type="nvarchar(max)" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ApartmentDetails">
           <Key>
@@ -45,8 +45,8 @@
           </Key>
           <Property Name="DatesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ApartmentId" Type="int" />
-          <Property Name="StartDate" Type="datetime" />
-          <Property Name="EndDate" Type="datetime" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
           <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Recommendations">
@@ -68,16 +68,6 @@
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="AddaitionalPhone" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Apartment_RentorDetails">
           <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
@@ -133,7 +123,6 @@
           <EntitySet Name="Dates" EntityType="Self.Dates" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Recommendations" EntityType="Self.Recommendations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
             <End Role="RentorDetails" EntitySet="RentorDetails" />
             <End Role="Apartment" EntitySet="Apartment" />
@@ -151,7 +140,8 @@
             <End Role="Recommendations" EntitySet="Recommendations" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ApartmentsForRentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -173,10 +163,10 @@
           <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DiscountPercentages" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfDiscountDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="RentorDetails" Relationship="Self.FK_Apartment_RentorDetails" FromRole="Apartment" ToRole="RentorDetails" />
           <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_ApartmentDetails_Apartment" FromRole="Apartment" ToRole="ApartmentDetails" />
           <NavigationProperty Name="Dates" Relationship="Self.FK_Dates_Apartment" FromRole="Apartment" ToRole="Dates" />
-          <Property Name="Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ApartmentDetails">
           <Key>
@@ -200,8 +190,8 @@
           </Key>
           <Property Name="DatesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ApartmentId" Type="Int32" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="Status" Type="Boolean" />
           <NavigationProperty Name="Apartment" Relationship="Self.FK_Dates_Apartment" FromRole="Dates" ToRole="Apartment" />
         </EntityType>
@@ -226,16 +216,6 @@
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AddaitionalPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Apartment" Relationship="Self.FK_Apartment_RentorDetails" FromRole="RentorDetails" ToRole="Apartment" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Apartment_RentorDetails">
           <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
@@ -285,13 +265,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ApartmentsForRentEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ApartmentsForRentEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Apartment" EntityType="Self.Apartment" />
           <EntitySet Name="ApartmentDetails" EntityType="Self.ApartmentDetails" />
           <EntitySet Name="Dates" EntityType="Self.Dates" />
           <EntitySet Name="Recommendations" EntityType="Self.Recommendations" />
           <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
             <End Role="RentorDetails" EntitySet="RentorDetails" />
             <End Role="Apartment" EntitySet="Apartment" />
@@ -314,11 +293,10 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ApartmentsForRentModelStoreContainer" CdmEntityContainer="ApartmentsForRentEntities">
+        <EntityContainerMapping StorageEntityContainer="ApartmentsForRentModelStoreContainer" CdmEntityContainer="ApartmentsForRentEntities1">
           <EntitySetMapping Name="Apartment">
             <EntityTypeMapping TypeName="ApartmentsForRentModel.Apartment">
               <MappingFragment StoreEntitySet="Apartment">
-                <ScalarProperty Name="Img" ColumnName="Img" />
                 <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
                 <ScalarProperty Name="RentorId" ColumnName="RentorId" />
                 <ScalarProperty Name="City" ColumnName="City" />
@@ -333,6 +311,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="DiscountPercentages" ColumnName="DiscountPercentages" />
                 <ScalarProperty Name="NumberOfDiscountDays" ColumnName="NumberOfDiscountDays" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -381,17 +360,6 @@
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="AddaitionalPhone" ColumnName="AddaitionalPhone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ApartmentsForRentModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

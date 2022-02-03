@@ -338,7 +338,7 @@ public class CodeStringGenerator
         foreach (var parameter in parameters.Where(p => p.NeedsLocalVariable))
         {
             var isNotNull = parameter.IsNullableOfT ? parameter.FunctionParameterName + ".HasValue" : parameter.FunctionParameterName + " != null";
-            var notNullInit = "new ectParameter(\"" + parameter.EsqlParameterName + "\", " + parameter.FunctionParameterName + ")";
+            var notNullInit = "new ObjectParameter(\"" + parameter.EsqlParameterName + "\", " + parameter.FunctionParameterName + ")";
             var nullInit = "new ObjectParameter(\"" + parameter.EsqlParameterName + "\", typeof(" + TypeMapper.FixNamespaces(parameter.RawClrTypeName) + "))";
             writeParameter(parameter.LocalVariableName, isNotNull, notNullInit, nullInit);
         }
