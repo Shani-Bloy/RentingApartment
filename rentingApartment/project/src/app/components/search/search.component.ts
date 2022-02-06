@@ -50,8 +50,8 @@ export class SearchComponent implements OnInit {
     this.IsAdvancedSearch=!this.IsAdvancedSearch;
 
   }
-  search(city:string,numChildren:number,startDate:Date,endDate:Date){    
-      this.apartmentService.getApartmentsForSearch({city,numChildren,startDate,endDate} as searchApartment)
+  search(City:string,NumChildren:number,StartDate:Date,EndDate:Date){    
+      this.apartmentService.getApartmentsForSearch({City,NumChildren,StartDate,EndDate} as searchApartment)
         .subscribe((apartments: any) => this.Apartments = apartments);
   }
 

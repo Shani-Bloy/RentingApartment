@@ -108,18 +108,16 @@ namespace API.Controllers
             return "value";
         }
 
-        // POST: api/Apartment
-        public void Post([FromBody]string value)
-        {
-        }
 
-        [Route("PostApartment")]
-        public void Post([FromBody] JObject data)
-        {
-            ApartmentDTO  apartment = data["apartment"].ToObject<ApartmentDTO>();
-            ApartmentDetailsDTO  apartmentDetails = data["apartmentDetails"].ToObject<ApartmentDetailsDTO>();          
-            new BL.ApartmentBL().PostApartment(apartment, apartmentDetails);
-        }
+       // [HttpPost]
+       //// [ActionName("newPost")]
+       // [Route("PostApartment")]
+       // public void newPost([FromBody] JObject data)
+       // {
+       //     ApartmentDTO apartment = data["apartment"].ToObject<ApartmentDTO>();
+       //     ApartmentDetailsDTO apartmentDetails = data["apartmentDetails"].ToObject<ApartmentDetailsDTO>();
+       //     new BL.ApartmentBL().PostApartment(apartment, apartmentDetails);
+       // }
 
 
         // PUT: api/Apartment/5

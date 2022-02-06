@@ -22,22 +22,22 @@
           </tr>
         <tr style="width: 50%;"> 
          
-          <td style="width: 5%;" [ngClass]="ApartmentD.Pool !='false' ? 'red' : 'green'"><mat-icon>local_parking</mat-icon> </td>        
-          <td style="width: 5%;"><mat-icon>pool</mat-icon>  </td>
-          <td style="width: 5%;"><mat-icon>accessible</mat-icon>  </td>
-          <td style="width: 5%;"><mat-icon>balcony</mat-icon>  </td>
-           <td style="width: 5%;"><mat-icon>elevator</mat-icon>  </td>
-          <td style="width: 5%;"><mat-icon>crib</mat-icon> </td>     
+          <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.Parking != false ? 'true' : 'false'">local_parking</mat-icon> </td>        
+          <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.Pool != false ? 'true' : 'false'">pool</mat-icon>  </td>
+          <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.DisableAccess == false ? 'false' : 'true'">accessible</mat-icon>  </td>
+          <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.Porch != false ? 'true' : 'false'">balcony</mat-icon>  </td>
+          <td style="width: 5%;" [ngClass]="Apartment.Elevator !='false' ? 'true' : 'false'"><mat-icon>elevator</mat-icon>  </td>
+          <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.Crib !=false ? 'true' : 'false'">crib</mat-icon> </td>     
 
         </tr>
         <tr style="width: 50%;">
             
-          <td style="width: 5%;"> Parking</td>        
-          <td style="width: 5%;">  pool</td>
-          <td style="width: 5%;"> accessible</td>
-          <td style="width: 5%;">  balcony</td>
-           <td style="width: 5%;"> elevator</td>
-          <td style="width: 5%;"> crib</td>     
+          <td style="width: 5%;" [ngClass]="ApartmentD.Parking != false ? 'true' : 'false'" > Parking</td>        
+          <td style="width: 5%;" [ngClass]="ApartmentD.Pool != false ? 'true' : 'false'">  pool</td>
+          <td style="width: 5%;" [ngClass]="ApartmentD.DisableAccess == false ? 'false' : 'true'"> accessible</td>
+          <td style="width: 5%;" [ngClass]="ApartmentD.Porch != false ? 'true' : 'false'">  balcony</td>
+          <td style="width: 5%;" [ngClass]="Apartment.Elevator !='false' ? 'true' : 'false'"> elevator</td>
+          <td style="width: 5%;" [ngClass]="ApartmentD.Crib !=false ? 'true' : 'false'"> crib</td>     
 
         </tr>
         <tr style="width: 50%;">        

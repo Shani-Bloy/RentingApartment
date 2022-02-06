@@ -11,9 +11,11 @@
       height: 600px;
       margin: auto;
   }
-  .red{
-    color:gray;
-  }
-  .green{
+  .true{
     color:black;
+    fill:black;
+  }
+  .false{
+    color:gray;
+    fill:gray;
   }

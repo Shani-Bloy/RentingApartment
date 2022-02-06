@@ -1,6 +1,8 @@
 export interface searchApartment {
-    city:string,
-    numChildren:number,
-    startDate:Date,
-    endDate:Date
+    City:string,
+    NumChildren:number,
+    StartDate:Date,
+    EndDate:Date,
+    PriceFrom:string,
+    PriceTo:string
 }
