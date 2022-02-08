@@ -109,3 +109,17 @@ C:\Users\user1\Desktop\rentingApartment\RentingApartment\rentingApartment\Apartm
 C:\Users\user1\Desktop\rentingApartment\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\user1\Desktop\rentingApartment\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\Dal.dll
 C:\Users\user1\Desktop\rentingApartment\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\Dal.pdb
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\Dal.dll.config
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\Dal.dll
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\Dal.pdb
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\Common.dll
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\EntityFramework.dll
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\EntityFramework.SqlServer.dll
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\Common.pdb
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\EntityFramework.xml
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\bin\Debug\EntityFramework.SqlServer.xml
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\DAL.csproj.CopyComplete
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\Dal.dll
+D:\RentingApartment\rentingApartment\ApartmentForRent\Dal\obj\Debug\Dal.pdb

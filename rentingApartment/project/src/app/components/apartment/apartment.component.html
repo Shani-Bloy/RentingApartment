@@ -2,7 +2,7 @@
 <div class="apartments" style="width: 80%; margin: auto;">
     <mat-card>  
         <mat-card-title-group style="display: block">         
-            <img mat-card-lg-image  src="https://localhost:44312/images/12.jpg" style="width: 320px;" >
+            <img mat-card-lg-image  src="{{apartment.Img}}" style="width: 320px;" >
         </mat-card-title-group>
         <mat-card-actions>         
             <button mat-flat-button  style="background-color:rgb(244, 189, 50);" routerLink='/apartmentDetails/{{apartment.ApartmentId}}'>for more
@@ -14,24 +14,24 @@
           <mat-card-content style="font-size: larger;">
             {{apartment.City}} , {{apartment.Street }} in floor {{apartment.Floor}}
           </mat-card-content>        
-        <!-- <mat-card-title>{{apartment.ApartmentId}}</mat-card-title>  -->
-        <!-- <div style="width: 70%; text-align: left;">
+        <mat-card-title>{{apartment.ApartmentId}}</mat-card-title> 
+       <div style="width: 70%; text-align: left;">
         </div>  
         <div style="position: absolute; right: 9px; top:10px; ">
-            <img mat-card-lg-image src="https://localhost:44312/images/12.jpg" style="width: 320px;" >
-        </div> -->
-            <!-- <span>adress </span> : {{apartment.City}},{{apartment.Street }} in floor {{apartment.Floor}}  |          
+            <!-- <img mat-card-lg-image src="https://localhost:44312/images/12.jpg" style="width: 320px;" > -->
+        </div> 
+           <span>adress </span> : {{apartment.City}},{{apartment.Street }} in floor {{apartment.Floor}}  |          
             <span>NumberOfRooms </span> : {{apartment.NumberOfRooms }} |
              <span>NumberOfBeds </span> : {{apartment.NumberOfBeds }} |
              <span>Price </span> : {{apartment.Price }} |
-             <span>NumberOfAirConditioners</span> : {{apartment.NumberOfAirConditioners}} | -->
+             <span>NumberOfAirConditioners</span> : {{apartment.NumberOfAirConditioners}} |
 
-             <!-- <span>ImmediatePrice </span> : {{apartment.ImmediatePrice}} | -->
-            <!-- <span>DiscountPercentages </span> : {{apartment.DiscountPercentages}} | -->
-            <!-- <span>Elevator </span> : {{apartment.Elevator}} | -->                     
-            <!-- <span>IsRentingImmediately </span> : {{apartment.IsRentingImmediately}} | -->                   
-            <!-- <span>NumberOfDiscountDays </span> : {{apartment.NumberOfDiscountDays }} | -->                   
-            <!-- <span>RentorId </span> : {{apartment.RentorId }} | -->       
+            <span>ImmediatePrice </span> : {{apartment.ImmediatePrice}} | 
+           <span>DiscountPercentages </span> : {{apartment.DiscountPercentages}} | 
+           <span>Elevator </span> : {{apartment.Elevator}} |                      
+           <span>IsRentingImmediately </span> : {{apartment.IsRentingImmediately}} |                    
+           <span>NumberOfDiscountDays </span> : {{apartment.NumberOfDiscountDays }} |                    
+           <span>RentorId </span> : {{apartment.RentorId }} |        
          
     </mat-card>
   

@@ -36,13 +36,32 @@ namespace API.Controllers
             return new ApartmentBL().GetApartments();
         }
 
+        //[HttpPost]
+        //[ActionName("SearchApartments")]
+        ////[Route("Search/{city}/{numChildren}/{startDate:DateTime}/{endDate:DateTime}")]
+        //public IEnumerable<ApartmentDTO> SearchApartments(SearchAppeartment searchAppeartment)
+        //{
+
+        //    return new ApartmentBL().SearchApartments(searchAppeartment);
+        //}
         [HttpPost]
-        [ActionName("SearchApartments")]
-        //[Route("Search/{city}/{numChildren}/{startDate:DateTime}/{endDate:DateTime}")]
-        public IEnumerable<ApartmentDTO> SearchApartments(SearchAppeartment searchAppeartment)
+        [Route("SearchApartments")]
+        public IEnumerable<ApartmentDTO> Post([FromBody] SearchAppeartment searchAppeartment)
         {
-            
-            return new ApartmentBL().SearchApartments(searchAppeartment);
+            Response result = new Response();
+            try
+            {
+                result.IsSuccess = true;
+                result.StatusCode = HttpStatusCode.OK;
+                result.Data =new ApartmentBL().SearchApartments(searchAppeartment);
+            }
+            catch (Exception ex)
+            {
+                result.IsSuccess = false;
+                result.Message = $"Temp Error, try again later. Error: {ex}";
+                result.StatusCode = HttpStatusCode.Unauthorized;
+            }
+            return (IEnumerable<ApartmentDTO>)result.Data;
         }
 
         [HttpGet()]
@@ -109,15 +128,15 @@ namespace API.Controllers
         }
 
 
-       // [HttpPost]
-       //// [ActionName("newPost")]
-       // [Route("PostApartment")]
-       // public void newPost([FromBody] JObject data)
-       // {
-       //     ApartmentDTO apartment = data["apartment"].ToObject<ApartmentDTO>();
-       //     ApartmentDetailsDTO apartmentDetails = data["apartmentDetails"].ToObject<ApartmentDetailsDTO>();
-       //     new BL.ApartmentBL().PostApartment(apartment, apartmentDetails);
-       // }
+        [HttpPost]
+        // [ActionName("newPost")]
+        [Route("PostApartment")]
+        public void newPost([FromBody] JObject data)
+        {
+            ApartmentDTO apartment = data["apartment"].ToObject<ApartmentDTO>();
+            ApartmentDetailsDTO apartmentDetails = data["apartmentDetails"].ToObject<ApartmentDetailsDTO>();
+            new BL.ApartmentBL().PostApartment(apartment, apartmentDetails);
+        }
 
 
         // PUT: api/Apartment/5

@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { ApartmentService } from 'src/app/services/apartment.service';
 import { date } from '../../models/date';
-import { searchApartment } from 'src/app/models/searchApartment';
+import { SearchAppeartment } from 'src/app/models/searchApartment';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -51,7 +51,7 @@ export class SearchComponent implements OnInit {
 
   }
   search(City:string,NumChildren:number,StartDate:Date,EndDate:Date){    
-      this.apartmentService.getApartmentsForSearch({City,NumChildren,StartDate,EndDate} as searchApartment)
+      this.apartmentService.getApartmentsForSearch({City,NumChildren,StartDate,EndDate} as SearchAppeartment)
         .subscribe((apartments: any) => this.Apartments = apartments);
   }
 

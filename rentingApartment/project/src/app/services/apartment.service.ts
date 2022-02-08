@@ -5,7 +5,7 @@ import { apartmentDetails } from '../models/apartmentDetails';
 import { Observable } from 'rxjs';
 import {formatDate} from '@angular/common';
 import { map } from 'rxjs/operators';
-import { searchApartment } from '../models/searchApartment';
+import { SearchAppeartment } from '../models/searchApartment';
 import { email } from '../models/email';
 
 @Injectable({
@@ -22,23 +22,29 @@ export class ApartmentService {
     return this.http.get(`${this.ApartmentUrl}/GetApartments`);
   }
 
-    getApartmentsForSearch(search:searchApartment){
-    const httpOptions = 
-          {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-          };
+    getApartmentsForSearch(search:SearchAppeartment){
+      console.log(search);          
+       return this.http.post<SearchAppeartment>(`${this.ApartmentUrl}/SearchApartments`,search)  
+       .pipe(
+        map(serverData => {debugger;
+          return serverData;
+        }));
+    // const httpOptions = 
+    //       {
+    //         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    //       };
           //  const params = new HttpParams()
           // .set('city', city)
           // .set('numChildren', numChildren.toString())
           // .set('startDate',startDate.toString())
           // .set('endDate',endDate.toString())
-        debugger;
-          let bodyParams = JSON.stringify({'searchAppeartment':search});
-          return this.http.post(this.ApartmentUrl + 'SearchApartments',{bodyParams},httpOptions)
-         .pipe(
-          map(serverData => {debugger;
-            return serverData;
-          }));
+        
+        //   let bodyParams = JSON.stringify({'searchAppeartment':search});
+        //   return this.http.post(this.ApartmentUrl + 'SearchApartments',{bodyParams},httpOptions)
+        //  .pipe(
+        //   map(serverData => {debugger;
+        //     return serverData;
+        //   }));
     
   }
 
