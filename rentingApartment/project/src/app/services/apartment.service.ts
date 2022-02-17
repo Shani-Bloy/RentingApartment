@@ -61,7 +61,10 @@ export class ApartmentService {
   }
 
   getRentorApartments(id:number){
-    return this.http.get(`${this.ApartmentUrl}/GetRentorApartment/${id}`)
+    return this.http.get(`${this.ApartmentUrl}/GetRentorApartment/${id}`
+  //sending token 
+   //,{headers: {token:'text'},}
+   )
   }
 
   updateApartment(apartment: apartment) {

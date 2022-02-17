@@ -10,19 +10,20 @@ import { ApartmentDetailsComponent } from './components/apartment-details/apartm
 import { UpdateApartmentComponent } from './components/update-apartment/update-apartment.component';
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { SearchComponent } from './components/search/search.component';
-
+import {AuthGuard} from './guards/auth-guard'
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'apartments', component: ApartmentsComponent },
-  { path: 'rentor', component: RentorComponent },
+  { path: 'rentor', component: RentorComponent , canActivate:[AuthGuard]  },
   { path: 'addApartment', component: AddApartmentComponent },
   { path: 'Search', component: SearchComponent },
   { path: 'apartmentDetails/:id', component: ApartmentDetailsComponent },
   { path: 'updateApartment/:id', component: UpdateApartmentComponent },
 ];
+//, canActivate:[AuthGuard]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

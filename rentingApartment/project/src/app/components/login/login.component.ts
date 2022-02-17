@@ -44,6 +44,8 @@ export class LoginComponent implements OnInit {
       .subscribe((res: any) => {
         if (res.IsSuccess && res.Data) {
           //todo - save data 
+          this.rentorService.currentUserToken='12345';
+          localStorage.setItem('currentUserToken', this.rentorService.currentUserToken);
           this.rentorLogin=res.Data;
           this.rentorService.rentorLogin = this.rentorLogin;   
           this.rentorService.NewRentor = null;                 

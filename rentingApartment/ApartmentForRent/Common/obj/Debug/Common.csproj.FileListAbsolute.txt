@@ -10,3 +10,9 @@ D:\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.cs
 D:\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.dll
 D:\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.pdb
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\bin\Debug\Common.dll
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\bin\Debug\Common.pdb
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.dll
+C:\Users\user1\Desktop\RentingApartment\rentingApartment\ApartmentForRent\Common\obj\Debug\Common.pdb

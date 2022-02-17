@@ -23,6 +23,16 @@
             <mat-icon>menu</mat-icon>
           </button>
         </td>
+        <td *ngIf="this.rentorService.currentUserToken">
+          <button
+            mat-flat-button
+            color="primary"
+            style="border: 2px solid"
+           (click)='logout()'
+          >
+            <mat-icon>logout</mat-icon> logout
+          </button>
+        </td>
 
         <td>
           <button

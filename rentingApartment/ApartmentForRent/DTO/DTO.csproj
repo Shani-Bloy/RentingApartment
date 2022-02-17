@@ -46,6 +46,7 @@
     <Compile Include="DatesDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentorDTO.cs" />
+    <Compile Include="RentorDTOwithToken.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

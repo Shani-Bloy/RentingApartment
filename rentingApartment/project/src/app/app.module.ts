@@ -32,9 +32,13 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { SearchComponent } from './components/search/search.component';
 import { ApartmentForRentComponent } from './apartment-for-rent/apartment-for-rent.component';
 import { EmailComponent } from './components/email/email.component';
+//import {GOOGLE_MAPS_PROVIDERS} from 'angular2-google-map/core';
+import { AgmCoreModule} from 'angular2-google-maps/core';
+
 
 const MATERIAL_MODULES = [
   MatCardModule,
+
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
@@ -66,6 +70,12 @@ const MATERIAL_MODULES = [
     SearchComponent,
     ApartmentForRentComponent,
     EmailComponent,
+    // AgmCoreModule.forRoot({
+    //   apiKey: '',
+
+    // })
+
+   
   ],
   imports: [
     BrowserModule,
@@ -73,8 +83,9 @@ const MATERIAL_MODULES = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
     ...MATERIAL_MODULES,
+    //GOOGLE_MAPS_PROVIDERS
   ],
   providers: [],
   bootstrap: [AppComponent],
