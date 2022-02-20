@@ -7,10 +7,13 @@ export class SearchAppeartment {
     PriceTo:string;
     DisableAccess:boolean;
     Pool:boolean;
-    DisableAcces:boolean;
     Porch:boolean;
     Parking:boolean;
     Crib:boolean;
     Elevator:boolean;
-    ImmediatelyRenting:boolean
+    ImmediatelyRenting:boolean;
+    NumberOfAirConditioners:number;
+    NumberOfRooms:number;  
+    minPrice:number;
+    maxPrice:number
 }

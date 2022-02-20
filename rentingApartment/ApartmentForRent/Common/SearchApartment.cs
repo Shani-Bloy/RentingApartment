@@ -7,10 +7,10 @@ namespace Common
 {
     public class SearchAppeartment
     {
-        
-        public string City     { get; set; }        
-        public  DateTime? StartDate { get; set; }
-        public  int? NumChildren     { get; set; }
+
+        public string City { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? NumChildren { get; set; }
         public DateTime? EndDate { get; set; }
         public bool? Parking { get; set; }
         public string PriceFrom { get; set; }
@@ -21,6 +21,10 @@ namespace Common
         public bool? Crib { get; set; }
         public bool? Elevator { get; set; }
         public bool? ImmediatelyRenting { get; set; }
+        public int? NumberOfAirConditioners { get; set; }
+        public int? NumberOfRooms { get; set; }
+        public int? minPrice { get; set; }
+        public int? maxPrice { get; set; }
 
 
     }

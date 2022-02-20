@@ -110,13 +110,13 @@
             <td>
               <mat-form-field appearance="fill" class="search">
                 <mat-label>num of rooms</mat-label>
-                <input matInput type="number" min="0" max="20" #numChildren />
+                <input matInput type="number" min="0" max="20"  formControlName="NumberOfRooms" />
               </mat-form-field>
             </td>
             <td>
               <mat-form-field appearance="fill" class="search">
                 <mat-label>num of Airconditioners</mat-label>
-                <input matInput type="number" min="0" max="20" #numChildren />
+                <input matInput type="number" min="0" max="20" formControlName="NumberOfAirConditioners" />
               </mat-form-field>
               
             </td>
@@ -125,11 +125,11 @@
              Price
               <mat-form-field appearance="fill" style="width: 100px;" class="search">
                 <mat-label>min price</mat-label>
-                <input matInput type="number" min="0" max="20" #numChildren />
+                <input matInput type="number" min="0" max="20" formControlName="minPrice" />
               </mat-form-field>
               <mat-form-field appearance="fill" style="width: 100px;" class="search">
                 <mat-label>max price</mat-label>
-                <input matInput type="number" min="0" max="20" #numChildren />
+                <input matInput type="number" min="0" max="20" formControlName="maxPrice" />
               </mat-form-field> 
             </td>
           </tr>

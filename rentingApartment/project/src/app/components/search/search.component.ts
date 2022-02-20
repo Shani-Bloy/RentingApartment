@@ -17,11 +17,15 @@ export class SearchComponent implements OnInit {
   constructor(private apartmentService: ApartmentService, fb: FormBuilder) {     
     this.toppings = fb.group({
       Pool: false,
-       DisableAccess: false,
+      DisableAccess: false,
       Porch: false,
       Elevator: false,
       Parking: false,
       ImmediatelyRenting : false,
+      NumberOfAirConditioners:0,
+      NumberOfRooms:0,
+      minPrice:null,
+      maxPrice:null,
     });  
   }
 
@@ -58,12 +62,18 @@ export class SearchComponent implements OnInit {
     searchAppeartment.NumChildren=NumChildren;
     searchAppeartment.StartDate=StartDate;
     searchAppeartment.EndDate=EndDate;debugger;
-    searchAppeartment.DisableAcces=this.toppings.controls["DisableAccess"].value;
+    searchAppeartment.DisableAccess=this.toppings.controls["DisableAccess"].value;
     searchAppeartment.Elevator=this.toppings.controls["Elevator"].value;
     searchAppeartment.Pool=this.toppings.controls["Pool"].value;
     searchAppeartment.Parking=this.toppings.controls["Parking"].value;
     searchAppeartment.Porch=this.toppings.controls["Porch"].value;
     searchAppeartment.ImmediatelyRenting=this.toppings.controls["ImmediatelyRenting"].value;
+    searchAppeartment.NumberOfAirConditioners=this.toppings.controls["NumberOfAirConditioners"].value;
+    searchAppeartment.NumberOfRooms=this.toppings.controls["NumberOfRooms"].value;
+    searchAppeartment.minPrice=this.toppings.controls["minPrice"].value;
+    searchAppeartment.maxPrice=this.toppings.controls["maxPrice"].value;
+
+
     this.apartmentService.getApartmentsForSearch(searchAppeartment)
                          .subscribe((apartments: any) => this.Apartments = apartments);
   }

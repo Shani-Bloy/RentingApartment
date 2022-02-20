@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal
 {
-   public class ApartmentDAL
+    public class ApartmentDAL
     {
         public IEnumerable<Apartment> GetAllApartments()
         {
@@ -29,13 +29,32 @@ namespace Dal
             {
                 using (ApartmentsForRentEntities ctx = new ApartmentsForRentEntities())
                 {
-                    var q = ctx.Apartment.Include("Dates").Include("ApartmentDetails").Where(x => 
-                    (searchAppeartment.City == "" || x.City == searchAppeartment.City) &&(x.ApartmentId==x.ApartmentId) &&                                                                      
-                    (searchAppeartment.NumChildren == null ||x.NumberOfBeds == searchAppeartment.NumChildren) &&
-                    ( (x.Dates.FirstOrDefault().StartDate ==null && x.Dates.FirstOrDefault().EndDate==null)||
-                    (searchAppeartment.StartDate != null && searchAppeartment.EndDate != null
-                    &&(searchAppeartment.StartDate >= x.Dates.FirstOrDefault().EndDate || (searchAppeartment.StartDate<=x.Dates.FirstOrDefault().StartDate && searchAppeartment.EndDate<=x.Dates.FirstOrDefault().EndDate))))||                   
-                    (searchAppeartment.Parking==true && x.ApartmentDetails.FirstOrDefault().Parking==searchAppeartment.Parking)
+                    var q = ctx.Apartment.Include("Dates").Include("ApartmentDetails").AsEnumerable().Where(x =>
+
+                    (searchAppeartment.City == "" || x.City == searchAppeartment.City) && (x.ApartmentId == x.ApartmentId) &&
+                    (searchAppeartment.NumChildren == null || x.NumberOfBeds == searchAppeartment.NumChildren) &&
+                    ((searchAppeartment.StartDate == null && searchAppeartment.EndDate == null) || (x.Dates.FirstOrDefault().StartDate == null && x.Dates.FirstOrDefault().EndDate == null) ||
+                    (searchAppeartment.StartDate != null && searchAppeartment.EndDate != null &&
+                    (searchAppeartment.StartDate >= x.Dates.FirstOrDefault().EndDate || (searchAppeartment.StartDate <= x.Dates.FirstOrDefault().StartDate && searchAppeartment.EndDate <= x.Dates.FirstOrDefault().EndDate)))) &&
+                    // (searchAppeartment.Parking==true && x.ApartmentDetails.FirstOrDefault().Parking==searchAppeartment.Parking)&&
+                    (searchAppeartment.Parking == false || (searchAppeartment.Parking == true && x.ApartmentDetails.FirstOrDefault().Parking == searchAppeartment.Parking)) &&
+                    (searchAppeartment.Porch == false || (x.ApartmentDetails.FirstOrDefault().Porch == 1 && searchAppeartment.Porch == true)) &&
+                    (searchAppeartment.DisableAccess == false || (x.ApartmentDetails.FirstOrDefault().DisableAccess == searchAppeartment.DisableAccess)) &&
+                    (searchAppeartment.Pool == false || (x.ApartmentDetails.FirstOrDefault().Pool == searchAppeartment.Pool)) &&
+                    (searchAppeartment.Elevator == false || (x.Elevator == searchAppeartment.Elevator)) &&
+                    (searchAppeartment.ImmediatelyRenting == false || (x.IsRentingImmediately == searchAppeartment.ImmediatelyRenting)) &&
+                    (searchAppeartment.NumberOfAirConditioners == 0 || (x.NumberOfAirConditioners == searchAppeartment.NumberOfAirConditioners)) &&
+                    (searchAppeartment.NumberOfRooms == 0 || (x.NumberOfRooms == searchAppeartment.NumberOfRooms)) &&
+                    (//צריך לגרום לזה שלא תהיה שום אפשרות להכניס דירה בלי מחיר!!!
+                    (searchAppeartment.minPrice == null && searchAppeartment.maxPrice == null) ||
+                    (searchAppeartment.minPrice == null && searchAppeartment.maxPrice != null && ((searchAppeartment.ImmediatelyRenting == false && int.Parse(x.Price) <= searchAppeartment.maxPrice) || (searchAppeartment.ImmediatelyRenting == true && x.IsRentingImmediately == true && int.Parse(x.ImmediatePrice) <= searchAppeartment.maxPrice))) ||
+                    (searchAppeartment.minPrice != null && searchAppeartment.maxPrice == null && ((searchAppeartment.ImmediatelyRenting == false && int.Parse(x.Price) >= searchAppeartment.minPrice) || (searchAppeartment.ImmediatelyRenting == true && x.IsRentingImmediately == true && int.Parse(x.ImmediatePrice) >= searchAppeartment.minPrice))) ||
+                    (searchAppeartment.minPrice != null && searchAppeartment.maxPrice != null && ((searchAppeartment.ImmediatelyRenting == false && int.Parse(x.Price) <= searchAppeartment.maxPrice && int.Parse(x.Price) >= searchAppeartment.minPrice) || (searchAppeartment.ImmediatelyRenting == true && x.IsRentingImmediately == true && int.Parse(x.ImmediatePrice) <= searchAppeartment.maxPrice && int.Parse(x.ImmediatePrice) >= searchAppeartment.minPrice)))
+                    )
+
+
+
+
                     )
                      .ToList();
                     //var a = q.Select(t => t.Dates.FirstOrDefault().Apartment).ToList();
@@ -75,22 +94,22 @@ namespace Dal
                 var a = ctx.Dates.SingleOrDefault(t => t.ApartmentId == id); //returns a single item.
                 if (a != null)
                 {
-                    ctx.Dates.Remove(a);                    
+                    ctx.Dates.Remove(a);
                 }
-               
+
                 var b = ctx.ApartmentDetails.SingleOrDefault(t => t.IdApartment == id);
                 if (b != null)
                 {
                     ctx.ApartmentDetails.Remove(b);
                 }
-                
+
                 var c = ctx.Apartment.SingleOrDefault(t => t.ApartmentId == id);
                 if (c != null)
                 {
                     ctx.Apartment.Remove(c);
-                } 
+                }
                 ctx.SaveChanges();
-            }                                           
+            }
         }
 
         public IEnumerable<Apartment> RentorApartments(int id)
@@ -99,7 +118,7 @@ namespace Dal
             {
                 using (ApartmentsForRentEntities ctx = new ApartmentsForRentEntities())
                 {
-                    var q = ctx.Apartment.AsEnumerable().Where(x => x.RentorId == id ).ToList();
+                    var q = ctx.Apartment.AsEnumerable().Where(x => x.RentorId == id).ToList();
                     return q;
                 }
             }
@@ -116,7 +135,7 @@ namespace Dal
                 return ctx.Apartment.Single(x => x.ApartmentId == id);
             }
         }
-        public void PostNewApartment(Apartment apartment,ApartmentDetails apartmentDetails)
+        public void PostNewApartment(Apartment apartment, ApartmentDetails apartmentDetails)
         {
             using (var ctx = new ApartmentsForRentEntities())
             {
@@ -135,11 +154,11 @@ namespace Dal
                 ApartmentDetailsDAL dal = new ApartmentDetailsDAL();
                 dal.PostNewApartmentDetails(apartmentDetails);
             }
-            
-        }
-     
 
-    }    
+        }
+
+
+    }
 }
 
 
