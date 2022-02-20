@@ -11,7 +11,8 @@ namespace Dal
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class ApartmentDetails
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace Dal
         }
     
         public int ApartmentDetailsID { get; set; }
+
+        [ForeignKey("ApartmentDetails")]
         public Nullable<int> IdApartment { get; set; }
         public Nullable<bool> Pool { get; set; }
         public Nullable<bool> DisableAccess { get; set; }

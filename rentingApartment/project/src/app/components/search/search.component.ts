@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
   constructor(private apartmentService: ApartmentService, fb: FormBuilder) {     
     this.toppings = fb.group({
       Pool: false,
-      DisableAccess: false,
+       DisableAccess: false,
       Porch: false,
       Elevator: false,
       Parking: false,
@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
     });  
   }
 
-  toppings: FormGroup;
+  public toppings: FormGroup;
   myControl = new FormControl();
   options: string[] = ['Bnei Brak', 'Yerushalaim', 'Tel Aviv','Petach Tikva','Ramat Gan','Afula'];
   filteredOptions: Observable<string[]>;
@@ -50,9 +50,22 @@ export class SearchComponent implements OnInit {
     this.IsAdvancedSearch=!this.IsAdvancedSearch;
 
   }
-  search(City:string,NumChildren:number,StartDate:Date,EndDate:Date){    
-      this.apartmentService.getApartmentsForSearch({City,NumChildren,StartDate,EndDate} as SearchAppeartment)
-        .subscribe((apartments: any) => this.Apartments = apartments);
+  search(City:string,NumChildren:number,StartDate:Date,EndDate:Date){  
+    debugger;  
+    let searchAppeartment:SearchAppeartment=new SearchAppeartment();
+   
+    searchAppeartment.City=City;
+    searchAppeartment.NumChildren=NumChildren;
+    searchAppeartment.StartDate=StartDate;
+    searchAppeartment.EndDate=EndDate;debugger;
+    searchAppeartment.DisableAcces=this.toppings.controls["DisableAccess"].value;
+    searchAppeartment.Elevator=this.toppings.controls["Elevator"].value;
+    searchAppeartment.Pool=this.toppings.controls["Pool"].value;
+    searchAppeartment.Parking=this.toppings.controls["Parking"].value;
+    searchAppeartment.Porch=this.toppings.controls["Porch"].value;
+    searchAppeartment.ImmediatelyRenting=this.toppings.controls["ImmediatelyRenting"].value;
+    this.apartmentService.getApartmentsForSearch(searchAppeartment)
+                         .subscribe((apartments: any) => this.Apartments = apartments);
   }
 
 }

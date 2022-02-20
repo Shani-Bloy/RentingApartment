@@ -29,15 +29,17 @@ namespace Dal
             {
                 using (ApartmentsForRentEntities ctx = new ApartmentsForRentEntities())
                 {
-                    var q = ctx.Dates.Include("Apartment").Where(x => 
-                    (searchAppeartment.City == "" || x.Apartment.City == searchAppeartment.City) &&(x.Apartment.ApartmentId==x.ApartmentId) &&                                                                      
-                    (searchAppeartment.NumChildren == null ||x.Apartment.NumberOfBeds == searchAppeartment.NumChildren) &&
-                    ( (x.StartDate==null && x.EndDate==null)||
+                    var q = ctx.Apartment.Include("Dates").Include("ApartmentDetails").Where(x => 
+                    (searchAppeartment.City == "" || x.City == searchAppeartment.City) &&(x.ApartmentId==x.ApartmentId) &&                                                                      
+                    (searchAppeartment.NumChildren == null ||x.NumberOfBeds == searchAppeartment.NumChildren) &&
+                    ( (x.Dates.FirstOrDefault().StartDate ==null && x.Dates.FirstOrDefault().EndDate==null)||
                     (searchAppeartment.StartDate != null && searchAppeartment.EndDate != null
-                    &&(searchAppeartment.StartDate >= x.EndDate || (searchAppeartment.StartDate<=x.StartDate && searchAppeartment.EndDate<=x.EndDate))))
-                    ).ToList();
-                    var a = q.Select(t => t.Apartment).ToList();
-                    return a;
+                    &&(searchAppeartment.StartDate >= x.Dates.FirstOrDefault().EndDate || (searchAppeartment.StartDate<=x.Dates.FirstOrDefault().StartDate && searchAppeartment.EndDate<=x.Dates.FirstOrDefault().EndDate))))||                   
+                    (searchAppeartment.Parking==true && x.ApartmentDetails.FirstOrDefault().Parking==searchAppeartment.Parking)
+                    )
+                     .ToList();
+                    //var a = q.Select(t => t.Dates.FirstOrDefault().Apartment).ToList();
+                    return q;
                 }
             }
             catch (Exception ex)
