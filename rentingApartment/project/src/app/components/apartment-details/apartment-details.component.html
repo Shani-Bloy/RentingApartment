@@ -1,6 +1,13 @@
 
+ <div style="float: right; width: 50%;  height: 100%; ">
+  <!-- background-color: aqua; -->
+  <agm-map [latitude]="lat" [longitude]="lng" >
+    <agm-marker [latitude]="51.678418" [longitude]="7.809007"></agm-marker>
+ </agm-map>
+ <!-- <app-header></app-header> -->
 
-  <mat-card  *ngIf='Apartment'>
+</div>
+  <mat-card  *ngIf='Apartment' style="width: 50%; height: 100%;">
     <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
     <mat-card-header>
       <mat-card-title>IdApartment: {{ApartmentD.IdApartment}}</mat-card-title>
@@ -8,6 +15,7 @@
     <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
     <!-- <img mat-card-image src="{{ApartmentD.ImageSrc}}" alt="Photo of a Shiba Inu" style="width: 35%; margin-left: 60%;"> -->
     <mat-card-content>
+     
       <table style="width: 50%;">
         <tr >
         <td >City <p style="font-weight:bold"> {{Apartment.City}}</p></td> 
@@ -15,10 +23,13 @@
         <td >Floor <p style="font-weight:bold"> {{Apartment.Floor}}</p></td> 
         </tr>
         <tr height="30px;" width="50%">
-       <td colspan="6">  <hr></td>
+       <td colspan="6">  <hr style="width: 100%;"></td>
           </tr>
           <tr>
             <td colspan="6"><h1>About the Apartment</h1></td>
+          </tr>
+          <tr>
+           <td colspan="6">The apartment is located in {{Apartment.City}} iat {{Apartment.Street}} Street on floor {{Apartment.Floor}}<br> </td> 
           </tr>
         <tr style="width: 50%;"> 
          
@@ -58,13 +69,15 @@
     </mat-card-content>
     
 
-    <mat-card-actions>
+    <mat-card-actions style="width: 50%;">
       <button mat-raised-button color="primary" (click)="openDialog()">Send Email</button>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
+  
   <br>
+  
 
 <!-- 
   <mat-card class="example-card">

@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   show:boolean=false;
   constructor(private rentorService: RentorService){}
   ngOnInit() {
-    debugger;
+   // debugger;
     this.rentorService.loadUserToken();
     this.show=true;
 }

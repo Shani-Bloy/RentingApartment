@@ -18,9 +18,15 @@ export class ApartmentDetailsComponent implements OnInit {
   Email:email;
   Apartment: any;
 
+  title = 'project';
+  lat = 22.2736308;
+  lng = 70.7512555;
+  show:boolean=false;
+
   ngOnInit(): void {
     this.activatedRoute.url.subscribe(url => {
       this.getApartmentDetails();
+      this.show=true;
     })
   }
 
