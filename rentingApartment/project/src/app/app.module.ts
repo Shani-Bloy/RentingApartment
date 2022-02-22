@@ -33,7 +33,8 @@ import { SearchComponent } from './components/search/search.component';
 import { ApartmentForRentComponent } from './apartment-for-rent/apartment-for-rent.component';
 import { EmailComponent } from './components/email/email.component';
 //import {GOOGLE_MAPS_PROVIDERS} from 'angular2-google-map/core';
-import { AgmCoreModule} from 'angular2-google-maps/core';
+//import { AgmCoreModule} from 'angular2-google-maps/core';
+import { AgmCoreModule } from '@agm/core';
 
 
 const MATERIAL_MODULES = [
@@ -70,10 +71,7 @@ const MATERIAL_MODULES = [
     SearchComponent,
     ApartmentForRentComponent,
     EmailComponent,
-    // AgmCoreModule.forRoot({
-    //   apiKey: '',
-
-    // })
+   
 
    
   ],
@@ -86,6 +84,11 @@ const MATERIAL_MODULES = [
     BrowserAnimationsModule, 
     ...MATERIAL_MODULES,
     //GOOGLE_MAPS_PROVIDERS
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC3t_aFr8c6EKvjG8zYB9F991TtSZh7aAI',
+      libraries: ['places']
+
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

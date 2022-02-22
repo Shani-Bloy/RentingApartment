@@ -8,8 +8,13 @@ import { RentorService } from './services/rentor.service';
 })
 export class AppComponent implements OnInit {
   title = 'project';
+  lat = 22.2736308;
+  lng = 70.7512555;
+  show:boolean=false;
   constructor(private rentorService: RentorService){}
   ngOnInit() {
+    debugger;
     this.rentorService.loadUserToken();
+    this.show=true;
 }
 }
