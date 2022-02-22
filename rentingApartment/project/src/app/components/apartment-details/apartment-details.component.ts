@@ -26,8 +26,8 @@ export class ApartmentDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.url.subscribe(url => {
       this.getApartmentDetails();
-      this.show=true;
-    })
+    });
+     this.show=true;
   }
 
   getApartmentDetails() {
