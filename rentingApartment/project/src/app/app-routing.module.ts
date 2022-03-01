@@ -11,13 +11,15 @@ import { UpdateApartmentComponent } from './components/update-apartment/update-a
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { SearchComponent } from './components/search/search.component';
 import {AuthGuard} from './guards/auth-guard'
+import { HomepageComponent } from './components/homepage/homepage.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
+  { path: 'homepage', component: HomepageComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'apartments', component: ApartmentsComponent },
-  { path: 'rentor', component: RentorComponent , canActivate:[AuthGuard]  },
+  { path: 'rentor', component: RentorComponent  },
   { path: 'addApartment', component: AddApartmentComponent },
   { path: 'Search', component: SearchComponent },
   { path: 'apartmentDetails/:id', component: ApartmentDetailsComponent },

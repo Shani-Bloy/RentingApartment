@@ -1,91 +1,164 @@
-<p>
-  <mat-toolbar style="height: 130px" color="primary">
-    <table style="width: 97%;">
-      <tr>
-        <td colspan="6">
-          <h1
-            align="left"
-            style="text-align: right; font-size: 30px; cursor: pointer;"
-            routerLink="/home"
-          >
-            APARTMENT.COM <mat-icon>apartment</mat-icon>
-          </h1>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 3%;"></td>
-        <td>
-          <button
-            mat-icon-button
-            class="example-icon"
-            aria-label="Example icon-button with menu icon"
-          >
-            <mat-icon>menu</mat-icon>
-          </button>
-        </td>
-        <td *ngIf="this.rentorService.currentUserToken">
-          <button
-            mat-flat-button
-            color="primary"
-            style="border: 2px solid"
-           (click)='logout()'
-          >
-            <mat-icon>logout</mat-icon> logout
-          </button>
-        </td>
+<mat-toolbar
+color="primary"
+  style="
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
+    border-bottom: 10px solid #152476;
+    height:14%;
+  "
+>
+  <img src="../../../assets/logo2.png" style="width: 360px;cursor: pointer;" routerLink="/homepage" />
+  <span class="example-spacer"></span>
+  <!-- <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button> -->
+  <button
+mat-flat-button
+style="
+  border: 2px solid;
+  font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#152476  ;
+"
+routerLink="/Search"
+>
+<mat-icon>search</mat-icon> 
+</button>
+  <button
+    *ngIf="this.rentorService.currentUserToken"
+    mat-flat-button
+    class="example-icon"
+    style="
+      border: 2px solid;
+      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+        Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#152476  ;
+    "
+    (click)="logout()"
+  >
+    <mat-icon>logout</mat-icon> 
+  </button>
 
-        <td>
-          <button
-            mat-flat-button
-            color="primary"
-            style="border: 2px solid"
-            routerLink="/login"
-          >
-            <mat-icon>login</mat-icon> login
-          </button>
-        </td>
-        <td>
-          <button
-            mat-flat-button
-            color="primary"
-            style="border: 2px solid"
-            routerLink="/register"
-          >
-            <mat-icon>person_add</mat-icon> register
-          </button>
-        </td>
-        <!-- <button mat-flat-button color="primary" routerLink='/apartments'><mat-icon>apartment</mat-icon> apartments</button> -->
-        <td>
-          <button
-            mat-flat-button
-            color="primary"
-            style="border: 2px solid"
-            routerLink="/Search"
-          >
-            <mat-icon>search</mat-icon> search for apartment
-          </button>
-        </td>
-        <td style="text-align: right; width: 65%">
-          <!-- <span>My App</span> -->
-          <span class="example-spacer"></span>
+  <button
+  *ngIf="!this.rentorService.currentUserToken"
+  mat-flat-button
+  class="example-icon"
+  style="
+    border: 2px solid;
+    font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#152476  ;
+  "
+  routerLink="/login"
+>
+  <mat-icon>login</mat-icon>
+</button>
 
-          <button
-            mat-icon-button
-            class="example-icon favorite-icon"
-            aria-label="Example icon-button with heart icon"
-          >
-            <td></td>
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <button
-            mat-icon-button
-            class="example-icon"
-            aria-label="Example icon-button with share icon"
-          >
-            <mat-icon>share</mat-icon>
-          </button>
-        </td>
-      </tr>
-    </table>
-  </mat-toolbar>
-</p>
+<button
+*ngIf="!this.rentorService.currentUserToken"
+  mat-flat-button
+  class="example-icon"
+  style="
+    border: 2px solid;
+    font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#152476  ;
+  "
+  routerLink="/register"
+>
+  <mat-icon>person_add</mat-icon> 
+</button>
+
+
+
+</mat-toolbar>
+
+<mat-toolbar style=" color:white; background-color:#152476 ; margin-top: 6.6%">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <button
+    *ngIf="this.rentorService.currentUserToken"
+    mat-flat-button
+    style="
+      border: 2px solid;
+      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+        Roboto, Helvetica, Arial, sans-serif;
+    "
+    (click)="logout()"
+  >
+    <mat-icon>logout</mat-icon> יציאה מהחשבון
+  </button>
+
+  <button
+    mat-flat-button
+    style="
+      border: 2px solid;
+      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+        Roboto, Helvetica, Arial, sans-serif; color:#152476;
+    "
+    routerLink="/login"
+  >
+    <mat-icon>login</mat-icon> כניסה לחשבון
+  </button>
+
+  <button
+    mat-flat-button
+    style="
+      border: 2px solid;
+      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+        Roboto, Helvetica, Arial, sans-serif;color: #152476;
+    "
+    routerLink="/register"
+  >
+    <mat-icon>person_add</mat-icon> הרשמה
+  </button>
+
+  <!-- <button mat-flat-button color="primary" routerLink='/apartments'><mat-icon>apartment</mat-icon> apartments</button> -->
+
+  <button
+    mat-flat-button
+    style="
+      border: 2px solid;
+      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+        Roboto, Helvetica, Arial, sans-serif;color: #152476;
+    "
+    routerLink="/Search"
+  >
+    <mat-icon>search</mat-icon> חיפוש דירה
+  </button>
+
+  <!-- <span>My App</span> -->
+  <span class="example-spacer"></span>
+
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>

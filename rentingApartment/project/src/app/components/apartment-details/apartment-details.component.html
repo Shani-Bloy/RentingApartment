@@ -10,13 +10,14 @@
   <mat-card  *ngIf='Apartment' style="width: 50%; height: 100%;">
     <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
     <mat-card-header>
-      <mat-card-title>IdApartment: {{ApartmentD.IdApartment}}</mat-card-title>
+      <mat-card-title>Apartment: {{ApartmentD.IdApartment}}</mat-card-title>
     </mat-card-header>
     <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
     <!-- <img mat-card-image src="{{ApartmentD.ImageSrc}}" alt="Photo of a Shiba Inu" style="width: 35%; margin-left: 60%;"> -->
     <mat-card-content>
      
-      <table style="width: 50%;">
+      <table style="width: 80%;">
+        <tr height="15px"></tr>
         <tr >
         <td >City <p style="font-weight:bold"> {{Apartment.City}}</p></td> 
         <td >Street <p style="font-weight:bold"> {{Apartment.Street}}</p></td> 
@@ -31,6 +32,7 @@
           <tr>
            <td colspan="6">The apartment is located in {{Apartment.City}} iat {{Apartment.Street}} Street on floor {{Apartment.Floor}}<br> </td> 
           </tr>
+          <tr height="20px"></tr>
         <tr style="width: 50%;"> 
          
           <td style="width: 5%;" ><mat-icon [ngClass]="ApartmentD.Parking != false ? 'true' : 'false'">local_parking</mat-icon> </td>        

@@ -1,0 +1,53 @@
+.mySlides {
+    display: none;
+border:10px solid #26bcbd;
+
+}
+
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
+}
+
+
+.button {
+    background-color: #26bcbd; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: Art;
+    /*position: absolute;
+    left: 550px;
+    top: 45%;*/
+}
+.button1 {
+    background-color: #26bcbd;  /*Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: Art;
+    /*position:absolute;
+    right:550px;
+    top:25%;*/
+}

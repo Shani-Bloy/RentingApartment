@@ -35,6 +35,7 @@ import { EmailComponent } from './components/email/email.component';
 //import {GOOGLE_MAPS_PROVIDERS} from 'angular2-google-map/core';
 //import { AgmCoreModule} from 'angular2-google-maps/core';
 import { AgmCoreModule } from '@agm/core';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 
 const MATERIAL_MODULES = [
@@ -71,6 +72,7 @@ const MATERIAL_MODULES = [
     SearchComponent,
     ApartmentForRentComponent,
     EmailComponent,
+    HomepageComponent,
    
 
    

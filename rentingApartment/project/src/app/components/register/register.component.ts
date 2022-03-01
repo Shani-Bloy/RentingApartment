@@ -54,6 +54,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
             console.log(res.Data);
             this.rentorService.NewRentor = res.Data;
             this.rentorService.rentorLogin = null;
+            debugger;
             this.router.navigate(['/rentor']);
           } else alert('erorr :( please try again');
           /*

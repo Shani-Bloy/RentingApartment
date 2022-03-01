@@ -38,7 +38,7 @@
   <!-- </form> -->
 
   <mat-form-field appearance="fill" class="search">
-    <mat-label>num children</mat-label>
+    <mat-label>num rooms</mat-label>
     <input matInput type="number" min="0" max="20" #numChildren />
   </mat-form-field>
 
@@ -65,7 +65,7 @@
 </div>
 
 <div id="divAdvancedSearch" *ngIf="IsAdvancedSearch">
-  <mat-card style="width: 57%; margin: -2.5%; margin-left: 18%">
+  <mat-card style="width: 57%; margin: -2.5%; margin-left: 18%; height: 230px;">
     <!-- <mat-card-title>Actions Buttons</mat-card-title>
           <mat-card-subtitle>Start</mat-card-subtitle> -->
     <mat-card-actions>
@@ -122,7 +122,7 @@
             </td>
 
             <td colspan="2">
-             Price
+             <!-- Price -->
               <mat-form-field appearance="fill" style="width: 100px;" class="search">
                 <mat-label>min price</mat-label>
                 <input matInput type="number" min="0" max="20" formControlName="minPrice" />
@@ -136,22 +136,22 @@
         </table>
       </section>
 
-      <section class="example-section" [formGroup]="toppings">
+      <!-- <section class="example-section" [formGroup]="toppings">
         <h4>You chose:</h4>
         {{ toppings.value | json }}
-      </section>
+      </section> -->
     </mat-card-actions>
   </mat-card>
 </div>
 
 <div *ngIf="Apartments">
-  <h1 style="text-align: center">
+  <!-- <h1 style="text-align: center">
     {{ Apartments.length }} apartments were found
-  </h1>
+  </h1> -->
 
   <div *ngFor="let apartment of Apartments">
-    <div class="apartments" style="width: 80%; margin: auto">
-      <mat-card class="mat-card">
+    <div class="apartments" style="width: 80%; margin: auto; ">
+      <mat-card class="mat-card" style="height: 100%;">
         <mat-card-title-group class="mat-card-title-group">
           <mat-card-title>{{ apartment.ApartmentId }}</mat-card-title>
           <mat-card-subtitle>{{ apartment.Price }} $ per bed</mat-card-subtitle>
@@ -218,7 +218,8 @@
             <mat-icon>crib</mat-icon>
             <mat-icon>shower</mat-icon> -->
         </mat-card-content>
-        <button (click)="sendEmail(apartment.RentorId)">send email</button>
+        <!-- <button (click)="sendEmail(apartment.RentorId)">send email</button> -->
+      
       </mat-card>
     </div>
   </div>
