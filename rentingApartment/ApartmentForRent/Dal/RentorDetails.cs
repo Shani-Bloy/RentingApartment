@@ -17,7 +17,9 @@ namespace Dal
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RentorDetails()
         {
-            this.Apartment = new HashSet<Apartment>();
+            this.ApartmentDetails = new HashSet<ApartmentDetails>();
+            this.DateAvailable = new HashSet<DateAvailable>();
+            this.RentedApartment = new HashSet<RentedApartment>();
         }
     
         public int IdRentor { get; set; }
@@ -25,10 +27,14 @@ namespace Dal
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Mail { get; set; }
-        public string Phone { get; set; }
+        public string Telephon { get; set; }
         public string AddaitionalPhone { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Apartment> Apartment { get; set; }
+        public virtual ICollection<ApartmentDetails> ApartmentDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DateAvailable> DateAvailable { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RentedApartment> RentedApartment { get; set; }
     }
 }

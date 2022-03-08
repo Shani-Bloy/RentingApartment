@@ -10,44 +10,19 @@ namespace BL
 {
     public class RentorBL
     {
-        private ApartmentsForRentEntities db = new ApartmentsForRentEntities();
-
-        public IEnumerable<RentorDTO> GetRentors()
+        public static  ApartmentsForRentEntities rentEntities = new ApartmentsForRentEntities();
+        public static List<RentorDTO> GetRentor()
         {
-            var list = new Dal.RentorDal().GetAll();
-            foreach (var item in list)
+            List<RentorDTO> r = new List<RentorDTO>();
+            List<RentorDetails> rentor = new List<RentorDetails>();
+            rentor = rentEntities.RentorDetails.ToList();
+            foreach (var item in rentor)
             {
-                yield return Converters.RentorConverter.ConvertToDTO(item);
+                RentorDTO r1 = RentorConverter.GetRentorDTOFromEntity(item);
+                r.Add(r1);
             }
-        }
-        public RentorDTO GetRentor(int id)
-        {
-            return Converters.RentorConverter.ConvertToDTO(new Dal.RentorDal().GetRentor(id));
-        }
-        
-        public RentorDTO PostRentor(RentorDTO rentor)
-        {
-            RentorDetails rentorDetails = db.RentorDetails.Add(new RentorDetails()
-            {
-                FirstName = rentor.FirstName,
-                LastName = rentor.LastName,
-                Password = rentor.Password,
-                Mail = rentor.Mail,
-                Phone = rentor.Phone,
-                AddaitionalPhone = rentor.AddaitionalPhone
-            });
-
-            db.SaveChanges();
-
-            return RentorConverter.ConvertToDTO(rentorDetails);
-        }
-        public void PutRentor(RentorDTO rentor)
-        {
-            new Dal.RentorDal().Put(Converters.RentorConverter.ConvertFromDTO(rentor));
-        }
-        public int login(string userName ,string password)
-        {
-            return new Dal.RentorDal().login(Converters.RentorConverter.ConvertFromDTO(userName, password));
+            return r;
+            
         }
     }
 }

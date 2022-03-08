@@ -11,30 +11,35 @@ namespace Dal
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class ApartmentDetails
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ApartmentDetails()
         {
-            this.Recommendations = new HashSet<Recommendations>();
+            this.AdditionalApartmentDetails = new HashSet<AdditionalApartmentDetails>();
+            this.DateAvailable = new HashSet<DateAvailable>();
+            this.RentedApartment = new HashSet<RentedApartment>();
         }
     
-        public int ApartmentDetailsID { get; set; }
-
-        [ForeignKey("ApartmentDetails")]
-        public Nullable<int> IdApartment { get; set; }
-        public Nullable<bool> Pool { get; set; }
-        public Nullable<bool> DisableAccess { get; set; }
-        public Nullable<int> Porch { get; set; }
-        public string ImageSrc { get; set; }
-        public Nullable<bool> Parking { get; set; }
-        public string AdditionalDescription { get; set; }
-        public Nullable<int> Crib { get; set; }
+        public int ApartmentID { get; set; }
+        public Nullable<int> RentorId { get; set; }
+        public string City { get; set; }
+        public string Street { get; set; }
+        public Nullable<int> Floor { get; set; }
+        public Nullable<bool> Elevator { get; set; }
+        public Nullable<bool> DisabledAccess { get; set; }
+        public Nullable<int> NumberOfRooms { get; set; }
+        public Nullable<int> NumberOfBeds { get; set; }
+        public Nullable<int> NumberOfAirConditioners { get; set; }
+        public Nullable<bool> IsRentingImmediately { get; set; }
     
-        public virtual Apartment Apartment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Recommendations> Recommendations { get; set; }
+        public virtual ICollection<AdditionalApartmentDetails> AdditionalApartmentDetails { get; set; }
+        public virtual RentorDetails RentorDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DateAvailable> DateAvailable { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RentedApartment> RentedApartment { get; set; }
     }
 }

@@ -1,9 +1,9 @@
 
 
-<h1 style="text-align: center;">Apartments</h1>
+<!-- <h1 style="text-align: center;">Apartments</h1> -->
 <div *ngIf='apartments'>
   <div *ngFor='let apartment of apartments'>
-    <div class="apartments" style="width:80%; margin:auto;">
+    <div class="apartments" style="width:90%; margin:auto;">
       <mat-card class="mat-card" style="height: 500px;">
         <mat-card-title-group class="mat-card-title-group">
           <mat-card-title>{{apartment.ApartmentId}}</mat-card-title>
@@ -59,8 +59,8 @@
           <mat-icon>crib</mat-icon>
           <mat-icon>shower</mat-icon> -->
         </mat-card-content>
-        <button (click)="sendEmail(apartment.RentorId)">send email</button>       
-      </mat-card>
+        <!-- <button (click)="sendEmail(apartment.RentorId)">send email</button>   -->
+      </mat-card> 
     </div>
   
   </div>

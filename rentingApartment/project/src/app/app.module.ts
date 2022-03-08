@@ -36,8 +36,13 @@ import { EmailComponent } from './components/email/email.component';
 //import { AgmCoreModule} from 'angular2-google-maps/core';
 import { AgmCoreModule } from '@agm/core';
 import { HomepageComponent } from './components/homepage/homepage.component';
-
-
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { ApiService } from './api.service';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+// For MDB Angular Free
+import {  CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
+import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 const MATERIAL_MODULES = [
   MatCardModule,
 
@@ -73,6 +78,7 @@ const MATERIAL_MODULES = [
     ApartmentForRentComponent,
     EmailComponent,
     HomepageComponent,
+    GalleryComponent,
    
 
    
@@ -84,6 +90,11 @@ const MATERIAL_MODULES = [
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule, 
+    CarouselModule,
+    WavesModule,
+    ModalModule,
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModulesPro.forRoot(),
     ...MATERIAL_MODULES,
     //GOOGLE_MAPS_PROVIDERS
     AgmCoreModule.forRoot({
@@ -92,7 +103,8 @@ const MATERIAL_MODULES = [
 
     })
   ],
-  providers: [],
+  schemas: [NO_ERRORS_SCHEMA],
+  providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

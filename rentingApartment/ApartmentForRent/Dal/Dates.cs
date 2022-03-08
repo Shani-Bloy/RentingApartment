@@ -14,12 +14,20 @@ namespace Dal
     
     public partial class Dates
     {
-        public int DatesId { get; set; }
-        public Nullable<int> ApartmentId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Dates()
+        {
+            this.DateAvailable = new HashSet<DateAvailable>();
+            this.RentedApartment = new HashSet<RentedApartment>();
+        }
+    
+        public int IdDate { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }
-        public Nullable<bool> Status { get; set; }
     
-        public virtual Apartment Apartment { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DateAvailable> DateAvailable { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RentedApartment> RentedApartment { get; set; }
     }
 }

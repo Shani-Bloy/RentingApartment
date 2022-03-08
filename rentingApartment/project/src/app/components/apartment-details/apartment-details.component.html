@@ -7,14 +7,16 @@
  <!-- <app-header></app-header> -->
 
 </div>
-  <mat-card  *ngIf='Apartment' style="width: 50%; height: 100%;">
+
+  <div  *ngIf='Apartment' style="width: 50%; height: 100%;"> 
+    <app-gallery style="width: 500px;"></app-gallery>
     <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
-    <mat-card-header>
-      <mat-card-title>Apartment: {{ApartmentD.IdApartment}}</mat-card-title>
-    </mat-card-header>
+    <!-- <div>
+      <div>Apartment: {{ApartmentD.IdApartment}}</div>
+    </div> -->
     <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
     <!-- <img mat-card-image src="{{ApartmentD.ImageSrc}}" alt="Photo of a Shiba Inu" style="width: 35%; margin-left: 60%;"> -->
-    <mat-card-content>
+    <div>
      
       <table style="width: 80%;">
         <tr height="15px"></tr>
@@ -68,15 +70,15 @@
       <p> Crib :{{ApartmentD.Crib}}</p>
       <p>ApartmentDetailsID :{{ApartmentD.ApartmentDetailsID}}</p>
       <p>DisableAccess :{{ApartmentD.DisableAccess}}</p> -->
-    </mat-card-content>
+    </div>
     
 
-    <mat-card-actions style="width: 50%;">
+    <div style="width: 50%;">
       <button mat-raised-button color="primary" (click)="openDialog()">Send Email</button>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+    </div>
+  </div>
   
   <br>
   

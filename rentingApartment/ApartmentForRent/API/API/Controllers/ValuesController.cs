@@ -8,48 +8,34 @@ using BL;
 using DTO;
 namespace API.Controllers
 {
-    [System.Web.Http.Cors.EnableCors(origins: "*", headers: "*", methods: "*")]
-    [RoutePrefix("api/values")]
     public class ValuesController : ApiController
     {
-        [Route("GetRentors")]
-        public IEnumerable<RentorDTO> Get()
+        // GET api/values
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        // GET api/values
+        public List<RentorDTO> Get()
         {
-            return new RentorBL().GetRentors();
-        }
-        [Route("GetApartments")]
-        public IEnumerable<ApartmentDTO> GetApartments()
-        {
-            return new ApartmentBL().GetApartments();
-        }
-        [Route("GetRentor/{id:int}")]
-        public RentorDTO Get(int id)
-        {
-            return new RentorBL().GetRentor(id);
+            return RentorBL.GetRentor();
         }
 
-        [Route("GetApartment/{id:int}")]
-        public ApartmentDTO GetApartment(int id)
+        // GET api/values/5
+        public string Get(int id)
         {
-            return new ApartmentBL().GetApartment(id);
+            return "value";
         }
 
-        [Route("GetApartmentDetails/{id:int}")]
-        public ApartmentDetailsDTO GetApartmentDetails(int id)
+        // POST api/values
+        public void Post([FromBody] string value)
         {
-            return new ApartmentDetailsBL().GetApartmentDetails(id);
         }
 
-        [Route("PostRentor")]
-        public void Post(RentorDTO rentor)
+        // PUT api/values/5
+        public void Put(int id, [FromBody] string value)
         {
-            new BL.RentorBL().PostRentor(rentor);
-        }
-
-        [Route("PutRentor")]
-        public void Put(RentorDTO rentor)
-        {
-            new BL.RentorBL().PutRentor(rentor);
         }
 
         // DELETE api/values/5

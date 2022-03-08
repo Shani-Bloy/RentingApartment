@@ -1,56 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ApartmentsForRentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Apartment">
+  <EntityType Name="AdditionalApartmentDetails">
     <Key>
-      <PropertyRef Name="ApartmentId" />
+      <PropertyRef Name="AdditionalApartmentID" />
     </Key>
-    <Property Name="ApartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdditionalApartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdApartment" Type="int" />
+    <Property Name="Pool" Type="bit" />
+    <Property Name="Terrace" Type="bit" />
+    <Property Name="Image" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parking" Type="bit" />
+    <Property Name="Recommendations" Type="int" />
+    <Property Name="AdditionalDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ApartmentDetails">
+    <Key>
+      <PropertyRef Name="ApartmentID" />
+    </Key>
+    <Property Name="ApartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RentorId" Type="int" />
     <Property Name="City" Type="nvarchar" MaxLength="50" />
     <Property Name="Street" Type="nvarchar" MaxLength="50" />
     <Property Name="Floor" Type="int" />
     <Property Name="Elevator" Type="bit" />
+    <Property Name="DisabledAccess" Type="bit" />
     <Property Name="NumberOfRooms" Type="int" />
     <Property Name="NumberOfBeds" Type="int" />
     <Property Name="NumberOfAirConditioners" Type="int" />
     <Property Name="IsRentingImmediately" Type="bit" />
-    <Property Name="ImmediatePrice" Type="nvarchar" MaxLength="50" />
-    <Property Name="Price" Type="nvarchar" MaxLength="50" />
-    <Property Name="DiscountPercentages" Type="nvarchar" MaxLength="50" />
-    <Property Name="NumberOfDiscountDays" Type="nvarchar" MaxLength="50" />
-    <Property Name="Img" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="ApartmentDetails">
+  <EntityType Name="DateAvailable">
     <Key>
-      <PropertyRef Name="ApartmentDetailsID" />
+      <PropertyRef Name="IdDateAvailable" />
     </Key>
-    <Property Name="ApartmentDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdApartment" Type="int" />
-    <Property Name="Pool" Type="bit" />
-    <Property Name="DisableAccess" Type="bit" />
-    <Property Name="Porch" Type="int" />
-    <Property Name="ImageSrc" Type="nvarchar" MaxLength="50" />
-    <Property Name="Parking" Type="bit" />
-    <Property Name="AdditionalDescription" Type="nvarchar(max)" />
-    <Property Name="Crib" Type="int" />
+    <Property Name="IdDateAvailable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRentor" Type="int" />
+    <Property Name="ApartmentId" Type="int" />
+    <Property Name="DateId" Type="int" />
   </EntityType>
   <EntityType Name="Dates">
     <Key>
-      <PropertyRef Name="DatesId" />
+      <PropertyRef Name="IdDate" />
     </Key>
-    <Property Name="DatesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ApartmentId" Type="int" />
+    <Property Name="IdDate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StartDate" Type="date" />
     <Property Name="EndDate" Type="date" />
-    <Property Name="Status" Type="bit" />
   </EntityType>
-  <EntityType Name="Recommendations">
+  <EntityType Name="RentedApartment">
     <Key>
-      <PropertyRef Name="RecommendationsId" />
+      <PropertyRef Name="RentedApartmentId" />
     </Key>
-    <Property Name="RecommendationsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdApartmentDetails" Type="int" />
-    <Property Name="Recommendations" Type="nvarchar(max)" />
+    <Property Name="RentedApartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApartmentId" Type="int" />
+    <Property Name="RentorId" Type="int" />
+    <Property Name="DateId" Type="int" />
   </EntityType>
   <EntityType Name="RentorDetails">
     <Key>
@@ -59,80 +62,187 @@
     <Property Name="IdRentor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-    <Property Name="Password" Type="nvarchar" MaxLength="50" />
-    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telephon" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="AddaitionalPhone" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <Association Name="FK_Apartment_RentorDetails">
-    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="*" />
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_AdditionalApartmentDetails_ApartmentDetails">
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
+    <End Role="AdditionalApartmentDetails" Type="Self.AdditionalApartmentDetails" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="RentorDetails">
-        <PropertyRef Name="IdRentor" />
+      <Principal Role="ApartmentDetails">
+        <PropertyRef Name="ApartmentID" />
       </Principal>
-      <Dependent Role="Apartment">
-        <PropertyRef Name="RentorId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ApartmentDetails_Apartment">
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="0..1" />
-    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Apartment">
-        <PropertyRef Name="ApartmentId" />
-      </Principal>
-      <Dependent Role="ApartmentDetails">
+      <Dependent Role="AdditionalApartmentDetails">
         <PropertyRef Name="IdApartment" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Dates_Apartment">
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="0..1" />
-    <End Role="Dates" Type="Self.Dates" Multiplicity="*" />
+  <Association Name="FK_ApartmentDetails_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Apartment">
-        <PropertyRef Name="ApartmentId" />
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
       </Principal>
-      <Dependent Role="Dates">
-        <PropertyRef Name="ApartmentId" />
+      <Dependent Role="ApartmentDetails">
+        <PropertyRef Name="RentorId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Recommendations_ApartmentDetails">
+  <Association Name="FK_DateAvailable_ApartmentDetails">
     <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
-    <End Role="Recommendations" Type="Self.Recommendations" Multiplicity="*" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ApartmentDetails">
-        <PropertyRef Name="ApartmentDetailsID" />
+        <PropertyRef Name="ApartmentID" />
       </Principal>
-      <Dependent Role="Recommendations">
-        <PropertyRef Name="IdApartmentDetails" />
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="ApartmentId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DateAvailable_Dates">
+    <End Role="Dates" Type="Self.Dates" Multiplicity="0..1" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dates">
+        <PropertyRef Name="IdDate" />
+      </Principal>
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="DateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DateAvailable_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
+      </Principal>
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="IdRentor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RentedApartment_ApartmentDetails">
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApartmentDetails">
+        <PropertyRef Name="ApartmentID" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="ApartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RentedApartment_Dates">
+    <End Role="Dates" Type="Self.Dates" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dates">
+        <PropertyRef Name="IdDate" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="DateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RentedApartment_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="RentorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="ApartmentsForRentModelStoreContainer">
-    <EntitySet Name="Apartment" EntityType="Self.Apartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdditionalApartmentDetails" EntityType="Self.AdditionalApartmentDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ApartmentDetails" EntityType="Self.ApartmentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DateAvailable" EntityType="Self.DateAvailable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dates" EntityType="Self.Dates" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Recommendations" EntityType="Self.Recommendations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RentedApartment" EntityType="Self.RentedApartment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AdditionalApartmentDetails_ApartmentDetails" Association="Self.FK_AdditionalApartmentDetails_ApartmentDetails">
+      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
+      <End Role="AdditionalApartmentDetails" EntitySet="AdditionalApartmentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApartmentDetails_RentorDetails" Association="Self.FK_ApartmentDetails_RentorDetails">
       <End Role="RentorDetails" EntitySet="RentorDetails" />
-      <End Role="Apartment" EntitySet="Apartment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ApartmentDetails_Apartment" Association="Self.FK_ApartmentDetails_Apartment">
-      <End Role="Apartment" EntitySet="Apartment" />
       <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_Dates_Apartment" Association="Self.FK_Dates_Apartment">
-      <End Role="Apartment" EntitySet="Apartment" />
+    <AssociationSet Name="FK_DateAvailable_ApartmentDetails" Association="Self.FK_DateAvailable_ApartmentDetails">
+      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DateAvailable_Dates" Association="Self.FK_DateAvailable_Dates">
       <End Role="Dates" EntitySet="Dates" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
     </AssociationSet>
-    <AssociationSet Name="FK_Recommendations_ApartmentDetails" Association="Self.FK_Recommendations_ApartmentDetails">
+    <AssociationSet Name="FK_DateAvailable_RentorDetails" Association="Self.FK_DateAvailable_RentorDetails">
+      <End Role="RentorDetails" EntitySet="RentorDetails" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_ApartmentDetails" Association="Self.FK_RentedApartment_ApartmentDetails">
       <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
-      <End Role="Recommendations" EntitySet="Recommendations" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_Dates" Association="Self.FK_RentedApartment_Dates">
+      <End Role="Dates" EntitySet="Dates" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_RentorDetails" Association="Self.FK_RentedApartment_RentorDetails">
+      <End Role="RentorDetails" EntitySet="RentorDetails" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

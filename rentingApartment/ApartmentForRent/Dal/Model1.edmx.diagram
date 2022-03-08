@@ -4,16 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="50485f48a06a4ddc9a05961bfda56217" Name="Diagram1">
-        <EntityTypeShape EntityType="ApartmentsForRentModel.Apartment" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApartmentsForRentModel.ApartmentDetails" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApartmentsForRentModel.Dates" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApartmentsForRentModel.Recommendations" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ApartmentsForRentModel.RentorDetails" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <AssociationConnector Association="ApartmentsForRentModel.FK_Apartment_RentorDetails" ManuallyRouted="false" />
-        <AssociationConnector Association="ApartmentsForRentModel.FK_ApartmentDetails_Apartment" ManuallyRouted="false" />
-        <AssociationConnector Association="ApartmentsForRentModel.FK_Dates_Apartment" ManuallyRouted="false" />
-        <AssociationConnector Association="ApartmentsForRentModel.FK_Recommendations_ApartmentDetails" ManuallyRouted="false" />
+      <Diagram DiagramId="ac272144a6574a8fa9176b78436bb856" Name="Diagram1">
+        <EntityTypeShape EntityType="ApartmentsForRentModel.AdditionalApartmentDetails" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.ApartmentDetails" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.DateAvailable" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.Dates" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.RentedApartment" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.RentorDetails" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentsForRentModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_AdditionalApartmentDetails_ApartmentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_ApartmentDetails_RentorDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_DateAvailable_ApartmentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_RentedApartment_ApartmentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_DateAvailable_Dates" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_DateAvailable_RentorDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_RentedApartment_Dates" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentsForRentModel.FK_RentedApartment_RentorDetails" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

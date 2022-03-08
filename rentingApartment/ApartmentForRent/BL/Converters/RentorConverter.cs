@@ -10,7 +10,7 @@ namespace BL.Converters
 {
     public class RentorConverter
     {
-        public static RentorDetails ConvertFromDTO(RentorDTO r)
+        public static RentorDetails GetRentorFromDTO(RentorDTO r)
         {
             RentorDetails rentor = new RentorDetails();
             rentor.IdRentor = r.IdRentor;
@@ -18,11 +18,11 @@ namespace BL.Converters
             rentor.LastName = r.LastName;
             rentor.Mail = r.Mail;
             rentor.Password = r.Password;
-            rentor.Phone = r.Phone;
+            rentor.Telephon = r.Telephon;
             rentor.AddaitionalPhone = r.AddaitionalPhone;
             return rentor;
         }
-        public static RentorDTO ConvertToDTO(RentorDetails entity)
+        public static RentorDTO GetRentorDTOFromEntity(RentorDetails entity)
         {
             RentorDTO rentor = new RentorDTO();
             rentor.IdRentor = entity.IdRentor;
@@ -30,15 +30,8 @@ namespace BL.Converters
             rentor.LastName = entity.LastName;
             rentor.Mail = entity.Mail;
             rentor.Password = entity.Password;
-            rentor.Phone = entity.Phone;
+            rentor.Telephon = entity.Telephon;
             rentor.AddaitionalPhone = entity.AddaitionalPhone;
-            return rentor;
-        }
-        public static RentorDetails ConvertFromDTO(string userName,string password)
-        {
-            RentorDetails rentor = new RentorDetails();            
-            rentor.Mail = userName;
-            rentor.Password = password;            
             return rentor;
         }
     }

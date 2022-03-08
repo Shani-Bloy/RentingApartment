@@ -48,23 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApartmentBL.cs" />
-    <Compile Include="ApartmentDetailsBL.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Converters\ApartmentConverter.cs" />
-    <Compile Include="Converters\ApartmentDetailsConverter.cs" />
-    <Compile Include="Converters\DatesConverter.cs" />
     <Compile Include="Converters\RentorConverter.cs" />
-    <Compile Include="DatesBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentorBL.cs" />
-    <Compile Include="UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{241a8cbb-8e69-4e8c-bbd8-ba2e1e64a21c}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dal\DAL.csproj">
       <Project>{59b39cd0-f625-4801-afd6-e6e233ef3d19}</Project>
       <Name>DAL</Name>

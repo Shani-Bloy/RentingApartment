@@ -1,63 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ApartmentsForRentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Apartment">
+  <EntityType Name="AdditionalApartmentDetails">
     <Key>
-      <PropertyRef Name="ApartmentId" />
+      <PropertyRef Name="AdditionalApartmentID" />
     </Key>
-    <Property Name="ApartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdditionalApartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdApartment" Type="Int32" />
+    <Property Name="Pool" Type="Boolean" />
+    <Property Name="Terrace" Type="Boolean" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parking" Type="Boolean" />
+    <Property Name="Recommendations" Type="Int32" />
+    <Property Name="AdditionalDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_AdditionalApartmentDetails_ApartmentDetails" FromRole="AdditionalApartmentDetails" ToRole="ApartmentDetails" />
+  </EntityType>
+  <EntityType Name="ApartmentDetails">
+    <Key>
+      <PropertyRef Name="ApartmentID" />
+    </Key>
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RentorId" Type="Int32" />
     <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Floor" Type="Int32" />
     <Property Name="Elevator" Type="Boolean" />
+    <Property Name="DisabledAccess" Type="Boolean" />
     <Property Name="NumberOfRooms" Type="Int32" />
     <Property Name="NumberOfBeds" Type="Int32" />
     <Property Name="NumberOfAirConditioners" Type="Int32" />
     <Property Name="IsRentingImmediately" Type="Boolean" />
-    <Property Name="ImmediatePrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DiscountPercentages" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NumberOfDiscountDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="RentorDetails" Relationship="Self.FK_Apartment_RentorDetails" FromRole="Apartment" ToRole="RentorDetails" />
-    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_ApartmentDetails_Apartment" FromRole="Apartment" ToRole="ApartmentDetails" />
-    <NavigationProperty Name="Dates" Relationship="Self.FK_Dates_Apartment" FromRole="Apartment" ToRole="Dates" />
+    <NavigationProperty Name="AdditionalApartmentDetails" Relationship="Self.FK_AdditionalApartmentDetails_ApartmentDetails" FromRole="ApartmentDetails" ToRole="AdditionalApartmentDetails" />
+    <NavigationProperty Name="RentorDetails" Relationship="Self.FK_ApartmentDetails_RentorDetails" FromRole="ApartmentDetails" ToRole="RentorDetails" />
+    <NavigationProperty Name="DateAvailable" Relationship="Self.FK_DateAvailable_ApartmentDetails" FromRole="ApartmentDetails" ToRole="DateAvailable" />
+    <NavigationProperty Name="RentedApartment" Relationship="Self.FK_RentedApartment_ApartmentDetails" FromRole="ApartmentDetails" ToRole="RentedApartment" />
   </EntityType>
-  <EntityType Name="ApartmentDetails">
+  <EntityType Name="DateAvailable">
     <Key>
-      <PropertyRef Name="ApartmentDetailsID" />
+      <PropertyRef Name="IdDateAvailable" />
     </Key>
-    <Property Name="ApartmentDetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IdApartment" Type="Int32" />
-    <Property Name="Pool" Type="Boolean" />
-    <Property Name="DisableAccess" Type="Boolean" />
-    <Property Name="Porch" Type="Int32" />
-    <Property Name="ImageSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Parking" Type="Boolean" />
-    <Property Name="AdditionalDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Crib" Type="Int32" />
-    <NavigationProperty Name="Apartment" Relationship="Self.FK_ApartmentDetails_Apartment" FromRole="ApartmentDetails" ToRole="Apartment" />
-    <NavigationProperty Name="Recommendations" Relationship="Self.FK_Recommendations_ApartmentDetails" FromRole="ApartmentDetails" ToRole="Recommendations" />
+    <Property Name="IdDateAvailable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRentor" Type="Int32" />
+    <Property Name="ApartmentId" Type="Int32" />
+    <Property Name="DateId" Type="Int32" />
+    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_DateAvailable_ApartmentDetails" FromRole="DateAvailable" ToRole="ApartmentDetails" />
+    <NavigationProperty Name="Dates" Relationship="Self.FK_DateAvailable_Dates" FromRole="DateAvailable" ToRole="Dates" />
+    <NavigationProperty Name="RentorDetails" Relationship="Self.FK_DateAvailable_RentorDetails" FromRole="DateAvailable" ToRole="RentorDetails" />
   </EntityType>
   <EntityType Name="Dates">
     <Key>
-      <PropertyRef Name="DatesId" />
+      <PropertyRef Name="IdDate" />
     </Key>
-    <Property Name="DatesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ApartmentId" Type="Int32" />
+    <Property Name="IdDate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="StartDate" Type="DateTime" Precision="0" />
     <Property Name="EndDate" Type="DateTime" Precision="0" />
-    <Property Name="Status" Type="Boolean" />
-    <NavigationProperty Name="Apartment" Relationship="Self.FK_Dates_Apartment" FromRole="Dates" ToRole="Apartment" />
+    <NavigationProperty Name="DateAvailable" Relationship="Self.FK_DateAvailable_Dates" FromRole="Dates" ToRole="DateAvailable" />
+    <NavigationProperty Name="RentedApartment" Relationship="Self.FK_RentedApartment_Dates" FromRole="Dates" ToRole="RentedApartment" />
   </EntityType>
-  <EntityType Name="Recommendations">
+  <EntityType Name="RentedApartment">
     <Key>
-      <PropertyRef Name="RecommendationsId" />
+      <PropertyRef Name="RentedApartmentId" />
     </Key>
-    <Property Name="RecommendationsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IdApartmentDetails" Type="Int32" />
-    <Property Name="Recommendations1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_Recommendations_ApartmentDetails" FromRole="Recommendations" ToRole="ApartmentDetails" />
+    <Property Name="RentedApartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApartmentId" Type="Int32" />
+    <Property Name="RentorId" Type="Int32" />
+    <Property Name="DateId" Type="Int32" />
+    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_RentedApartment_ApartmentDetails" FromRole="RentedApartment" ToRole="ApartmentDetails" />
+    <NavigationProperty Name="Dates" Relationship="Self.FK_RentedApartment_Dates" FromRole="RentedApartment" ToRole="Dates" />
+    <NavigationProperty Name="RentorDetails" Relationship="Self.FK_RentedApartment_RentorDetails" FromRole="RentedApartment" ToRole="RentorDetails" />
   </EntityType>
   <EntityType Name="RentorDetails">
     <Key>
@@ -66,81 +75,200 @@
     <Property Name="IdRentor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telephon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AddaitionalPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Apartment" Relationship="Self.FK_Apartment_RentorDetails" FromRole="RentorDetails" ToRole="Apartment" />
+    <NavigationProperty Name="ApartmentDetails" Relationship="Self.FK_ApartmentDetails_RentorDetails" FromRole="RentorDetails" ToRole="ApartmentDetails" />
+    <NavigationProperty Name="DateAvailable" Relationship="Self.FK_DateAvailable_RentorDetails" FromRole="RentorDetails" ToRole="DateAvailable" />
+    <NavigationProperty Name="RentedApartment" Relationship="Self.FK_RentedApartment_RentorDetails" FromRole="RentorDetails" ToRole="RentedApartment" />
   </EntityType>
-  <Association Name="FK_Apartment_RentorDetails">
-    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="*" />
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_AdditionalApartmentDetails_ApartmentDetails">
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
+    <End Role="AdditionalApartmentDetails" Type="Self.AdditionalApartmentDetails" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="RentorDetails">
-        <PropertyRef Name="IdRentor" />
+      <Principal Role="ApartmentDetails">
+        <PropertyRef Name="ApartmentID" />
       </Principal>
-      <Dependent Role="Apartment">
-        <PropertyRef Name="RentorId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ApartmentDetails_Apartment">
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="0..1" />
-    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Apartment">
-        <PropertyRef Name="ApartmentId" />
-      </Principal>
-      <Dependent Role="ApartmentDetails">
+      <Dependent Role="AdditionalApartmentDetails">
         <PropertyRef Name="IdApartment" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Dates_Apartment">
-    <End Role="Apartment" Type="Self.Apartment" Multiplicity="0..1" />
-    <End Role="Dates" Type="Self.Dates" Multiplicity="*" />
+  <Association Name="FK_ApartmentDetails_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Apartment">
-        <PropertyRef Name="ApartmentId" />
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
       </Principal>
-      <Dependent Role="Dates">
-        <PropertyRef Name="ApartmentId" />
+      <Dependent Role="ApartmentDetails">
+        <PropertyRef Name="RentorId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Recommendations_ApartmentDetails">
+  <Association Name="FK_DateAvailable_ApartmentDetails">
     <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
-    <End Role="Recommendations" Type="Self.Recommendations" Multiplicity="*" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ApartmentDetails">
-        <PropertyRef Name="ApartmentDetailsID" />
+        <PropertyRef Name="ApartmentID" />
       </Principal>
-      <Dependent Role="Recommendations">
-        <PropertyRef Name="IdApartmentDetails" />
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="ApartmentId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ApartmentsForRentEntities1" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Apartment" EntityType="Self.Apartment" />
+  <Association Name="FK_RentedApartment_ApartmentDetails">
+    <End Role="ApartmentDetails" Type="Self.ApartmentDetails" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApartmentDetails">
+        <PropertyRef Name="ApartmentID" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="ApartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DateAvailable_Dates">
+    <End Role="Dates" Type="Self.Dates" Multiplicity="0..1" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dates">
+        <PropertyRef Name="IdDate" />
+      </Principal>
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="DateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DateAvailable_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="DateAvailable" Type="Self.DateAvailable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
+      </Principal>
+      <Dependent Role="DateAvailable">
+        <PropertyRef Name="IdRentor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RentedApartment_Dates">
+    <End Role="Dates" Type="Self.Dates" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dates">
+        <PropertyRef Name="IdDate" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="DateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RentedApartment_RentorDetails">
+    <End Role="RentorDetails" Type="Self.RentorDetails" Multiplicity="0..1" />
+    <End Role="RentedApartment" Type="Self.RentedApartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentorDetails">
+        <PropertyRef Name="IdRentor" />
+      </Principal>
+      <Dependent Role="RentedApartment">
+        <PropertyRef Name="RentorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApartmentsForRentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdditionalApartmentDetails" EntityType="Self.AdditionalApartmentDetails" />
     <EntitySet Name="ApartmentDetails" EntityType="Self.ApartmentDetails" />
+    <EntitySet Name="DateAvailable" EntityType="Self.DateAvailable" />
     <EntitySet Name="Dates" EntityType="Self.Dates" />
-    <EntitySet Name="Recommendations" EntityType="Self.Recommendations" />
+    <EntitySet Name="RentedApartment" EntityType="Self.RentedApartment" />
     <EntitySet Name="RentorDetails" EntityType="Self.RentorDetails" />
-    <AssociationSet Name="FK_Apartment_RentorDetails" Association="Self.FK_Apartment_RentorDetails">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_AdditionalApartmentDetails_ApartmentDetails" Association="Self.FK_AdditionalApartmentDetails_ApartmentDetails">
+      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
+      <End Role="AdditionalApartmentDetails" EntitySet="AdditionalApartmentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApartmentDetails_RentorDetails" Association="Self.FK_ApartmentDetails_RentorDetails">
       <End Role="RentorDetails" EntitySet="RentorDetails" />
-      <End Role="Apartment" EntitySet="Apartment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ApartmentDetails_Apartment" Association="Self.FK_ApartmentDetails_Apartment">
-      <End Role="Apartment" EntitySet="Apartment" />
       <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_Dates_Apartment" Association="Self.FK_Dates_Apartment">
-      <End Role="Apartment" EntitySet="Apartment" />
+    <AssociationSet Name="FK_DateAvailable_ApartmentDetails" Association="Self.FK_DateAvailable_ApartmentDetails">
+      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_ApartmentDetails" Association="Self.FK_RentedApartment_ApartmentDetails">
+      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DateAvailable_Dates" Association="Self.FK_DateAvailable_Dates">
       <End Role="Dates" EntitySet="Dates" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
     </AssociationSet>
-    <AssociationSet Name="FK_Recommendations_ApartmentDetails" Association="Self.FK_Recommendations_ApartmentDetails">
-      <End Role="ApartmentDetails" EntitySet="ApartmentDetails" />
-      <End Role="Recommendations" EntitySet="Recommendations" />
+    <AssociationSet Name="FK_DateAvailable_RentorDetails" Association="Self.FK_DateAvailable_RentorDetails">
+      <End Role="RentorDetails" EntitySet="RentorDetails" />
+      <End Role="DateAvailable" EntitySet="DateAvailable" />
     </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_Dates" Association="Self.FK_RentedApartment_Dates">
+      <End Role="Dates" EntitySet="Dates" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RentedApartment_RentorDetails" Association="Self.FK_RentedApartment_RentorDetails">
+      <End Role="RentorDetails" EntitySet="RentorDetails" />
+      <End Role="RentedApartment" EntitySet="RentedApartment" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ApartmentsForRentModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ApartmentsForRentModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

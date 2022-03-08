@@ -13,7 +13,7 @@ namespace DTO
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Mail { get; set; }
-        public string Phone { get; set; }
+        public string Telephon { get; set; }
         public string AddaitionalPhone { get; set; }
     }
 }

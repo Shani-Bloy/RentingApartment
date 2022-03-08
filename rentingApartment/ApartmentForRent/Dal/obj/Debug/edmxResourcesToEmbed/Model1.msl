@@ -1,59 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ApartmentsForRentModelStoreContainer" CdmEntityContainer="ApartmentsForRentEntities1">
-    <EntitySetMapping Name="Apartment">
-      <EntityTypeMapping TypeName="ApartmentsForRentModel.Apartment">
-        <MappingFragment StoreEntitySet="Apartment">
-          <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
-          <ScalarProperty Name="RentorId" ColumnName="RentorId" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="Street" ColumnName="Street" />
-          <ScalarProperty Name="Floor" ColumnName="Floor" />
-          <ScalarProperty Name="Elevator" ColumnName="Elevator" />
-          <ScalarProperty Name="NumberOfRooms" ColumnName="NumberOfRooms" />
-          <ScalarProperty Name="NumberOfBeds" ColumnName="NumberOfBeds" />
-          <ScalarProperty Name="NumberOfAirConditioners" ColumnName="NumberOfAirConditioners" />
-          <ScalarProperty Name="IsRentingImmediately" ColumnName="IsRentingImmediately" />
-          <ScalarProperty Name="ImmediatePrice" ColumnName="ImmediatePrice" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="DiscountPercentages" ColumnName="DiscountPercentages" />
-          <ScalarProperty Name="NumberOfDiscountDays" ColumnName="NumberOfDiscountDays" />
-          <ScalarProperty Name="Img" ColumnName="Img" />
+  <EntityContainerMapping StorageEntityContainer="ApartmentsForRentModelStoreContainer" CdmEntityContainer="ApartmentsForRentEntities">
+    <EntitySetMapping Name="AdditionalApartmentDetails">
+      <EntityTypeMapping TypeName="ApartmentsForRentModel.AdditionalApartmentDetails">
+        <MappingFragment StoreEntitySet="AdditionalApartmentDetails">
+          <ScalarProperty Name="AdditionalApartmentID" ColumnName="AdditionalApartmentID" />
+          <ScalarProperty Name="IdApartment" ColumnName="IdApartment" />
+          <ScalarProperty Name="Pool" ColumnName="Pool" />
+          <ScalarProperty Name="Terrace" ColumnName="Terrace" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="Recommendations" ColumnName="Recommendations" />
+          <ScalarProperty Name="AdditionalDescription" ColumnName="AdditionalDescription" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ApartmentDetails">
       <EntityTypeMapping TypeName="ApartmentsForRentModel.ApartmentDetails">
         <MappingFragment StoreEntitySet="ApartmentDetails">
-          <ScalarProperty Name="ApartmentDetailsID" ColumnName="ApartmentDetailsID" />
-          <ScalarProperty Name="IdApartment" ColumnName="IdApartment" />
-          <ScalarProperty Name="Pool" ColumnName="Pool" />
-          <ScalarProperty Name="DisableAccess" ColumnName="DisableAccess" />
-          <ScalarProperty Name="Porch" ColumnName="Porch" />
-          <ScalarProperty Name="ImageSrc" ColumnName="ImageSrc" />
-          <ScalarProperty Name="Parking" ColumnName="Parking" />
-          <ScalarProperty Name="AdditionalDescription" ColumnName="AdditionalDescription" />
-          <ScalarProperty Name="Crib" ColumnName="Crib" />
+          <ScalarProperty Name="ApartmentID" ColumnName="ApartmentID" />
+          <ScalarProperty Name="RentorId" ColumnName="RentorId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Elevator" ColumnName="Elevator" />
+          <ScalarProperty Name="DisabledAccess" ColumnName="DisabledAccess" />
+          <ScalarProperty Name="NumberOfRooms" ColumnName="NumberOfRooms" />
+          <ScalarProperty Name="NumberOfBeds" ColumnName="NumberOfBeds" />
+          <ScalarProperty Name="NumberOfAirConditioners" ColumnName="NumberOfAirConditioners" />
+          <ScalarProperty Name="IsRentingImmediately" ColumnName="IsRentingImmediately" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DateAvailable">
+      <EntityTypeMapping TypeName="ApartmentsForRentModel.DateAvailable">
+        <MappingFragment StoreEntitySet="DateAvailable">
+          <ScalarProperty Name="IdDateAvailable" ColumnName="IdDateAvailable" />
+          <ScalarProperty Name="IdRentor" ColumnName="IdRentor" />
+          <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
+          <ScalarProperty Name="DateId" ColumnName="DateId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Dates">
       <EntityTypeMapping TypeName="ApartmentsForRentModel.Dates">
         <MappingFragment StoreEntitySet="Dates">
-          <ScalarProperty Name="DatesId" ColumnName="DatesId" />
-          <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
+          <ScalarProperty Name="IdDate" ColumnName="IdDate" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />
           <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Recommendations">
-      <EntityTypeMapping TypeName="ApartmentsForRentModel.Recommendations">
-        <MappingFragment StoreEntitySet="Recommendations">
-          <ScalarProperty Name="RecommendationsId" ColumnName="RecommendationsId" />
-          <ScalarProperty Name="IdApartmentDetails" ColumnName="IdApartmentDetails" />
-          <ScalarProperty Name="Recommendations1" ColumnName="Recommendations" />
+    <EntitySetMapping Name="RentedApartment">
+      <EntityTypeMapping TypeName="ApartmentsForRentModel.RentedApartment">
+        <MappingFragment StoreEntitySet="RentedApartment">
+          <ScalarProperty Name="RentedApartmentId" ColumnName="RentedApartmentId" />
+          <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
+          <ScalarProperty Name="RentorId" ColumnName="RentorId" />
+          <ScalarProperty Name="DateId" ColumnName="DateId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -65,10 +69,45 @@
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Telephon" ColumnName="Telephon" />
           <ScalarProperty Name="AddaitionalPhone" ColumnName="AddaitionalPhone" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ApartmentsForRentModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ApartmentsForRentModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ApartmentsForRentModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ApartmentsForRentModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ApartmentsForRentModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ApartmentsForRentModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ApartmentsForRentModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ApartmentsForRentModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ApartmentsForRentModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ApartmentsForRentModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

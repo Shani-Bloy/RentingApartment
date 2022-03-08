@@ -5,13 +5,13 @@ color="primary"
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 2px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(147 146 146 / 19%);
     z-index: 2;
-    border-bottom: 10px solid #152476;
+    
     height:14%;
   "
 >
-  <img src="../../../assets/logo2.png" style="width: 360px;cursor: pointer;" routerLink="/homepage" />
+  <img src="../../../assets/logo2.png" style="width: 300px;cursor: pointer;" routerLink="/homepage" />
   <span class="example-spacer"></span>
   <!-- <button
     mat-icon-button
@@ -32,11 +32,22 @@ mat-flat-button
 style="
   border: 2px solid;
   font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-    Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#152476  ;
+    Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#187a7e  ;
 "
 routerLink="/Search"
 >
 <mat-icon>search</mat-icon> 
+</button>
+<button
+mat-flat-button
+style="
+  border: 2px solid;
+  font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#187a7e  ;
+"
+routerLink="/home"
+>
+<mat-icon>apartment</mat-icon> 
 </button>
   <button
     *ngIf="this.rentorService.currentUserToken"
@@ -45,7 +56,7 @@ routerLink="/Search"
     style="
       border: 2px solid;
       font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-        Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#152476  ;
+        Roboto, Helvetica, Arial, sans-serif; color:white; background-color:#187a7e  ;
     "
     (click)="logout()"
   >
@@ -59,7 +70,7 @@ routerLink="/Search"
   style="
     border: 2px solid;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#152476  ;
+      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#187a7e  ;
   "
   routerLink="/login"
 >
@@ -73,7 +84,7 @@ routerLink="/Search"
   style="
     border: 2px solid;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#152476  ;
+      Roboto, Helvetica, Arial, sans-serif;color:white; background-color:#187a7e  ;
   "
   routerLink="/register"
 >
@@ -83,68 +94,63 @@ routerLink="/Search"
 
 
 </mat-toolbar>
+<div style=" color:white;  "></div>
 
-<mat-toolbar style=" color:white; background-color:#152476 ; margin-top: 6.6%">
+
+
+
+ <mat-toolbar style=" color:white; background-color:#187a7e ; margin-top: 6.6%">
   <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
   >
-    <mat-icon>menu</mat-icon>
+    
   </button>
-
+  <span class="example-spacer"></span> 
+   <button
+  mat-button
+  style=" color:white; font-size: 20px; font-weight: 100;    font-family: system-ui;width:120px; "    
+    routerLink="/homepage"
+  >
+   ABOUT US
+  </button>
   <button
     *ngIf="this.rentorService.currentUserToken"
-    mat-flat-button
-    style="
-      border: 2px solid;
-      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-        Roboto, Helvetica, Arial, sans-serif;
-    "
+    mat-button
+    style=" color:white; font-size: 20px; font-weight: 100;    font-family: system-ui;width:120px; "    
     (click)="logout()"
   >
-    <mat-icon>logout</mat-icon> יציאה מהחשבון
+  LOG OUT
   </button>
 
   <button
-    mat-flat-button
-    style="
-      border: 2px solid;
-      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-        Roboto, Helvetica, Arial, sans-serif; color:#152476;
-    "
+  mat-button
+    style=" color:white; font-size: 20px; font-weight: 100;    font-family: system-ui;width:120px; "    
     routerLink="/login"
   >
-    <mat-icon>login</mat-icon> כניסה לחשבון
+     LOGIN
   </button>
 
   <button
-    mat-flat-button
-    style="
-      border: 2px solid;
-      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-        Roboto, Helvetica, Arial, sans-serif;color: #152476;
-    "
+  mat-button
+  style=" color:white; font-size: 20px; font-weight: 100;    font-family: system-ui; width:120px;"    
     routerLink="/register"
   >
-    <mat-icon>person_add</mat-icon> הרשמה
+    REGISTER
   </button>
 
-  <!-- <button mat-flat-button color="primary" routerLink='/apartments'><mat-icon>apartment</mat-icon> apartments</button> -->
-
+ 
   <button
-    mat-flat-button
-    style="
-      border: 2px solid;
-      font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI,
-        Roboto, Helvetica, Arial, sans-serif;color: #152476;
-    "
+  mat-button
+  style=" color:white; font-size: 20px; font-weight: 100;    font-family: system-ui;width:120px; "    
+
     routerLink="/Search"
   >
-    <mat-icon>search</mat-icon> חיפוש דירה
+   SEARCH
   </button>
 
-  <!-- <span>My App</span> -->
+ 
   <span class="example-spacer"></span>
 
   <button
