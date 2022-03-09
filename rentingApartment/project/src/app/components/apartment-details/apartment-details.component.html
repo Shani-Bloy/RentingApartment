@@ -1,14 +1,14 @@
 
  <div style="float: right; width: 50%;  height: 100%; ">
   <!-- background-color: aqua; -->
-  <agm-map [latitude]="lat" [longitude]="lng" >
+  <agm-map [latitude]="lat" [longitude]="lng" style="padding: 20px;">
     <agm-marker [latitude]="51.678418" [longitude]="7.809007"></agm-marker>
  </agm-map>
  <!-- <app-header></app-header> -->
 
 </div>
 
-  <div  *ngIf='Apartment' style="width: 50%; height: 100%;"> 
+  <div  *ngIf='Apartment' style="width: 50%; height: 100%; padding: 20px;"> 
     <app-gallery style="width: 500px;"></app-gallery>
     <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
     <!-- <div>

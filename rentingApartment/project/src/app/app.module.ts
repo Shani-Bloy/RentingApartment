@@ -43,6 +43,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 // For MDB Angular Free
 import {  CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
 import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const MATERIAL_MODULES = [
   MatCardModule,
 
@@ -101,7 +102,8 @@ const MATERIAL_MODULES = [
       apiKey: 'AIzaSyC3t_aFr8c6EKvjG8zYB9F991TtSZh7aAI',
       libraries: ['places']
 
-    })
+    }),
+    NgbModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [MDBSpinningPreloader],
