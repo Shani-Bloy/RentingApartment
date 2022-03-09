@@ -1,7 +1,7 @@
 
 
 <div class="bigDiv" *ngIf='rentor'>
-  <h1 style="text-align: center;">Add an apartment</h1>
+  <h1 style="color: #187a7e; font-size: 35px; font-weight: 100; text-align: center;">Add an apartment</h1>
   <div class="example-container">
     <form>
 
@@ -47,6 +47,10 @@
               <input matInput type="number"  placeholder="Rooms" #airconditioners>
             </mat-form-field>
           </td>
+         
+        </tr>
+        <tr>
+         
         </tr>
         <!-- <tr>
           <td>
@@ -57,7 +61,7 @@
             </mat-form-field>
           </td>
         </tr> -->
-      </table>
+     
      <!-- <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Number of rooms</mat-label>
         <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="0" type="number" #rooms>
@@ -87,6 +91,9 @@
           <mat-label>Image</mat-label>
           <input  #imageInput type="file"  (change)='upload(imageInput)'/> 
         </div> -->
+        <tr>
+  
+      </table>
     </form>
   <button mat-flat-button style="background-color:rgb(244, 189, 50); width: 405px; height: 55px;" 
     class="addApartment"

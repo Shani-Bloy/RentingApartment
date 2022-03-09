@@ -1,22 +1,23 @@
 
 <div *ngIf='apartment'> 
-    <mat-card class="example-card">       
-        <p>city : <input [(ngModel)]="apartment.City"></p> 
-        <p>DiscountPercentages : <input [(ngModel)]="apartment.DiscountPercentages"></p> 
-        <p>Elevator : <input [(ngModel)]="apartment.Elevator"></p> 
-        <p>Floor : <input [(ngModel)]="apartment.Floor"></p>
-        <p>ImmediatePrice : <input [(ngModel)]="apartment.ImmediatePrice"></p> 
-        <p>IsRentingImmediately : <input [(ngModel)]="apartment.IsRentingImmediately"></p> 
-        <p>NumberOfAirConditioners : <input [(ngModel)]="apartment.NumberOfAirConditioners"></p> 
-        <p>NumberOfBeds : <input [(ngModel)]="apartment.NumberOfBeds"></p> 
-        <p>NumberOfDiscountDays : <input [(ngModel)]="apartment.NumberOfDiscountDays"></p> 
-        <p>NumberOfRooms : <input [(ngModel)]="apartment.NumberOfRooms"></p> 
-        <p>Price : <input [(ngModel)]="apartment.Price"></p>       
-        <p>Street : <input [(ngModel)]="apartment.Street"> </p>   
-        <mat-card-actions>    
-            <button mat-flat-button color="primary" (click)='save()'>SAVE</button>                    
-    <button mat-flat-button color="primary" routerLink='/apartmentDetails/{{apartment.ApartmentId}}'>for more details</button>
-    </mat-card-actions>
-    </mat-card>     
+    <h1 style="color: #187a7e; font-size: 35px; font-weight: 100;text-align: center;">Update</h1>
+        
+        <span>city  <input [(ngModel)]="apartment.City" class="form-control"></span> 
+        <span>DiscountPercentages  <input [(ngModel)]="apartment.DiscountPercentages" class="form-control"></span> 
+        <span>Elevator  <input [(ngModel)]="apartment.Elevator" class="form-control"></span> 
+        <span>Floor  <input [(ngModel)]="apartment.Floor" class="form-control"></span>
+        <span>ImmediatePrice  <input [(ngModel)]="apartment.ImmediatePrice" class="form-control"></span> 
+        <span>IsRentingImmediately  <input [(ngModel)]="apartment.IsRentingImmediately" class="form-control"></span> 
+        <span>NumberOfAirConditioners  <input [(ngModel)]="apartment.NumberOfAirConditioners" class="form-control"></span> 
+        <span>NumberOfBeds  <input [(ngModel)]="apartment.NumberOfBeds" class="form-control"></span> 
+        <span>NumberOfDiscountDays  <input [(ngModel)]="apartment.NumberOfDiscountDays" class="form-control"></span> 
+        <span>NumberOfRooms  <input [(ngModel)]="apartment.NumberOfRooms" class="form-control"></span> 
+        <span>Price  <input [(ngModel)]="apartment.Price" class="form-control"></span>       
+        <span>Street  <input [(ngModel)]="apartment.Street" class="form-control"> </span> 
+        <button mat-flat-button style="background-color: rgb(244, 189, 50);width: 560px;
+        margin-top: 12px;" class="example-full-width" (click)="save()">save</button>  
+            <!-- <button mat-flat-button color="primary" (click)='save()'>SAVE</button>                     -->
+    <!-- <button mat-flat-button color="primary" routerLink='/apartmentDetails/{{apartment.ApartmentId}}'>for more details</button> -->
+      
    
 </div>
