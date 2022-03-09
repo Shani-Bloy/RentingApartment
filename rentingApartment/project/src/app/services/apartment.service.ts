@@ -79,7 +79,10 @@ export class ApartmentService {
   }
 
   deleteApartment(apartment: apartment ){
-  const id =  apartment.ApartmentId;
+ // a : apartment = apartment;
+  const id = apartment.ApartmentId;
+  // apartment.ApartmentId;
+  debugger;
     return this.http.delete<apartment>(`${this.ApartmentUrl}/deleteApartment/${id}`)
   }
 
